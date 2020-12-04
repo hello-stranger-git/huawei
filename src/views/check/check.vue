@@ -8,7 +8,7 @@
           <el-button @click="btn">主厅摄像头</el-button>
           <el-button>副厅摄像头</el-button>
           <el-button>摄像头1</el-button>
-          <el-button>大厅摄像头背后</el-button>
+          <el-button>大厅摄像头背后1</el-button>
           <el-button>主厅摄像头背后</el-button>
         </div>
       </div>
