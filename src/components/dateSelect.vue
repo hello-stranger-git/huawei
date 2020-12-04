@@ -94,16 +94,16 @@ export default {
   border-bottom: 3px solid;
 }
 .togDate {
-  position: relative;
+  /* position: relative; */
 }
-.datePicker {
+/* .datePicker {
   position: absolute;
   top: 0;
   opacity: 0;
   width: 100%;
   height: 100%;
-}
-/deep/.el-date-editor.el-input,
+} */
+/* /deep/.el-date-editor.el-input,
 .el-date-editor.el-input__inner {
   width: 100%;
   height: 100%;
@@ -111,5 +111,19 @@ export default {
 /deep/.el-input--mini .el-input__inner {
   width: 100%;
   height: 100%;
+} */
+.calendar {
+  position: absolute;
+  z-index: 1;
+  top: 52px;
+  width: 90%;
+  left: 5%;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px 5px rgb(20 20 21 / 20%);
+  opacity: 90%;
+  background-color: #fff;
+}
+>>> .calendar .rowDays {
+  height: 30px;
 }
 </style>
