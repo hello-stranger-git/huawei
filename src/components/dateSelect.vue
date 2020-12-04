@@ -1,5 +1,7 @@
 <template>
   <div class="dateSelectDiv">
+    <Calendar class="calendar"
+              v-if="calendarShow"></Calendar>
     <div class="dateSelect">
       <el-col :span="4">
         <span class="active">今日</span>
@@ -18,12 +20,13 @@
       </el-col>
       <el-col :span="4"
               class="togDate">
-        <div class="point">
+        <div class="point"
+             @click="togCalendar">
           <li></li>
           <li></li>
           <li></li>
         </div>
-        <div class="datePicker">
+        <!-- <div class="datePicker">
           <el-date-picker @change="datePicker"
                           v-model="value1"
                           type="date"
@@ -32,23 +35,30 @@
                           size="mini"
                           :editable="false">
           </el-date-picker>
-        </div>
+        </div> -->
       </el-col>
     </div>
   </div>
 </template>
 
 <script>
+import Calendar from '@/components/calendar.vue'
 export default {
   data () {
     return {
       value1: "",
+      calendarShow: false
     };
   },
-  components: {},
+  components: {
+    Calendar,
+  },
   methods: {
     datePicker () {
       console.log(this.value1)
+    },
+    togCalendar () {
+      this.calendarShow = !this.calendarShow;
     }
   },
 };
@@ -57,6 +67,7 @@ export default {
 <style scoped>
 .dateSelectDiv {
   background-color: #fff;
+  position: relative;
 }
 .dateSelect {
   margin: auto;
