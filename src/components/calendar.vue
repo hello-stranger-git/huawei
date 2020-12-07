@@ -6,7 +6,7 @@
       <span @click="nextMonth">&gt;</span>
     </div>
     <div class="weekHeader">
-      <span v-for="(week, index) in weeks" class="week">
+      <span v-for="(week, index) in weeks" class="week" :key="index">
         <span
           :class="[week == '星期六' || week == '星期日' ? 'vacation' : '']"
           >{{ week }}</span
@@ -15,7 +15,7 @@
     </div>
     <div class="calendarDate">
       <div v-for="(day, index) in days" :key="index" class="rowDays">
-        <span v-for="(item, i) in days[index]" class="day">
+        <span v-for="(item, i) in days[index]" class="day" :key="i">
           <span
             v-if="item.day"
             :class="[
@@ -35,15 +35,7 @@
 export default {
   data() {
     return {
-      weeks: [
-        '星期一',
-        '星期二',
-        '星期三',
-        '星期四',
-        '星期五',
-        '星期六',
-        '星期日',
-      ],
+      weeks: ['一', '二', '三', '四', '五', '六', '日'],
       currentYear: new Date().getFullYear(), //当前年
       currentMonth: new Date().getMonth() + 1, //当前月
       currentMonthWeek: new Date(new Date().setDate(1)).getDay(), //当前月的一号是星期几
@@ -114,7 +106,10 @@ export default {
   },
   methods: {
     changeDay(day) {
+      //点击日期
       this.now = day;
+      this.$store.state.caladerBackground = !this.$store.state
+        .caladerBackground;
     },
     preMonth() {
       this.currentDay = new Date(
@@ -229,8 +224,6 @@ export default {
   .rowDays {
     font-size: 12px;
     height: 50px;
-    // background-color: #fff;
-    // background-color: blanchedalmond;
     display: flex;
     justify-content: space-between;
     align-items: center;

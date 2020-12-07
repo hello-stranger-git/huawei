@@ -1,7 +1,6 @@
 <template>
   <div class="dateSelectDiv">
-    <Calendar class="calendar"
-              v-if="calendarShow"></Calendar>
+    <Calendar class="calendar" v-show="calendarShow"></Calendar>
     <div class="dateSelect">
       <el-col :span="4">
         <span class="active">今日</span>
@@ -18,53 +17,46 @@
       <el-col :span="4">
         <span>11/11</span>
       </el-col>
-      <el-col :span="4"
-              class="togDate">
-        <div class="point"
-             @click="togCalendar">
+      <el-col :span="4" class="togDate">
+        <div class="point" @click="togCalendar">
           <li></li>
           <li></li>
           <li></li>
         </div>
-        <!-- <div class="datePicker">
-          <el-date-picker @change="datePicker"
-                          v-model="value1"
-                          type="date"
-                          ref="datePicker"
-                          placeholder=""
-                          size="mini"
-                          :editable="false">
-          </el-date-picker>
-        </div> -->
       </el-col>
     </div>
   </div>
 </template>
 
 <script>
-import Calendar from '@/components/calendar.vue'
+import Calendar from '@/components/calendar.vue';
 export default {
-  data () {
+  data() {
     return {
-      value1: "",
-      calendarShow: false
+      value1: '',
+      calendarShow: false,
     };
   },
   components: {
     Calendar,
   },
   methods: {
-    datePicker () {
-      console.log(this.value1)
-    },
-    togCalendar () {
+    togCalendar() {
       this.calendarShow = !this.calendarShow;
-    }
+      this.$store.state.caladerBackground = !this.$store.state
+        .caladerBackground;
+    },
+  },
+  watch: {
+    '$store.state.caladerBackground': function() {
+      //控制打开客流日历遮罩层
+      this.calendarShow = this.$store.state.caladerBackground;
+    },
   },
 };
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 .dateSelectDiv {
   background-color: #fff;
   position: relative;
@@ -93,28 +85,9 @@ export default {
   padding-bottom: 6px;
   border-bottom: 3px solid;
 }
-.togDate {
-  /* position: relative; */
-}
-/* .datePicker {
-  position: absolute;
-  top: 0;
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-} */
-/* /deep/.el-date-editor.el-input,
-.el-date-editor.el-input__inner {
-  width: 100%;
-  height: 100%;
-}
-/deep/.el-input--mini .el-input__inner {
-  width: 100%;
-  height: 100%;
-} */
 .calendar {
   position: absolute;
-  z-index: 1;
+  z-index: 3;
   top: 52px;
   width: 90%;
   left: 5%;
@@ -123,7 +96,7 @@ export default {
   opacity: 90%;
   background-color: #fff;
 }
->>> .calendar .rowDays {
+/deep/ .calendar .rowDays {
   height: 30px;
 }
 </style>
