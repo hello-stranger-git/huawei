@@ -4,7 +4,9 @@
     <div class="indexModel">
       <div class="checkTop">
         <div class="btnGroup">
-          <el-button :class="activeBtn?'activeBtn ':'' ">大厅摄像头</el-button>
+          <el-button :class="activeBtn ? 'activeBtn ' : ''"
+            >大厅摄像头</el-button
+          >
           <el-button @click="btn">主厅摄像头</el-button>
           <el-button>副厅摄像头</el-button>
           <el-button>摄像头1</el-button>
@@ -13,13 +15,13 @@
         </div>
       </div>
       <div class="video">
-        <img :src="videoImage"
-             height="100%"
-             width="100%">
+        <img :src="videoImage" height="100%" width="100%" />
       </div>
       <div class="videoBtnGroup">
-        <i class="el-icon-caret-bottom videoBtnGroupIcon"
-           style="color:#fff;background-color: #4490d2;"></i>
+        <i
+          class="el-icon-caret-bottom videoBtnGroupIcon"
+          style="color:#fff;background-color: #4490d2;"
+        ></i>
         <el-button>11-22</el-button>
         <el-button>11-23</el-button>
         <el-button>11-24</el-button>
@@ -36,8 +38,7 @@
         <TimeAxis></TimeAxis>
       </div>
       <div class="checkBtn">
-        <button class="check"
-                @click="check">
+        <button class="check" @click="check">
           <span>点检</span>
         </button>
       </div>
@@ -47,29 +48,29 @@
 </template>
 
 <script>
-let videoImage = require("@/assets/screenImage/videoImage.png")
+let videoImage = require('@/assets/screenImage/videoImage.png');
 // let timeAxis = require("@/assets/videoImage/timeAxis.png")
-import TimeAxis from "@/components/check/timeAxis.vue"; //时间轴
-import Menu from "@/components/home/Menu.vue"; //菜单栏
+import TimeAxis from '@/components/check/timeAxis.vue'; //时间轴
+import Menu from '@/components/home/Menu.vue'; //菜单栏
 export default {
-  data () {
+  data() {
     return {
       videoImage: videoImage,
-      activeBtn: true
+      activeBtn: true,
       // timeAxis: timeAxis
-    }
+    };
   },
   components: {
     Menu,
-    TimeAxis
+    TimeAxis,
   },
   methods: {
-    check () {
-      this.$router.push({ name: "CheckItem" })
+    check() {
+      this.$router.push({ name: 'CheckItem' });
     },
-    btn () {
+    btn() {
       this.activeBtn = false;
-    }
+    },
   },
 };
 </script>
