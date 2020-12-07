@@ -7,6 +7,9 @@ import Flow from '../views/flow/Flow.vue'
 import Check from '../views/check/check.vue'
 import CheckItem from '../components/check/checkItem.vue'
 import User from '../views/user/user.vue'
+import App from '../views/app/app.vue'
+
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -35,6 +38,11 @@ const routes = [
         path: '/User',
         name: 'User',
         component: User
+      },
+      {
+        path: '/App',
+        name: 'App',
+        component: App
       },
     ],
   },
