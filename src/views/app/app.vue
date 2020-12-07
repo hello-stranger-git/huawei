@@ -3,7 +3,11 @@
     <!-- tab选项区域 -->
     <el-tabs type="border-card" class="apps">
       <!-- 使用中 -->
-      <el-tab-pane label="使用中"> </el-tab-pane>
+      <el-tab-pane label="使用中">
+        <div v-for="(item, i) of appusedata" :key="i">
+          <Appuse :item="item"></Appuse>
+        </div>
+      </el-tab-pane>
       <!-- 未使用 -->
       <el-tab-pane label="未使用">
         <div v-for="(item, i) of appdata" :key="i">
@@ -14,16 +18,57 @@
   </div>
 </template>
 <script>
-// const icon = require('@/assets/appimage/dun.png');
-
-import Appinfo from '@/components/app/appinfo.vue';
+import Appuse from '@/components/app/appUse.vue'; //使用中
+import Appinfo from '@/components/app/appinfo.vue'; //未使用
 export default {
   components: {
     Appinfo,
+    Appuse,
   },
   data() {
     return {
-      // 数据
+      // 使用数据
+      appusedata: [
+        {
+          title: '保险服务',
+          datas: [
+            {
+              icon: 'icongongdan',
+              name: '保单录入',
+            },
+            {
+              icon: 'iconchaxun',
+              name: '保单查询',
+            },
+            {
+              icon: 'icongongyingshangdailishang',
+              name: '代理人信息',
+            },
+          ],
+        },
+        {
+          title: '内部管理',
+          datas: [
+            {
+              icon: 'iconEmail',
+              name: '工作汇报',
+            },
+            {
+              icon: 'icongonggao',
+              name: '内部公告',
+            },
+            {
+              icon: 'iconkequn',
+              name: '客户管理',
+            },
+            {
+              icon: 'iconziyuan',
+              name: '任务管理',
+            },
+          ],
+        },
+      ],
+      // 未使用数据
       appdata: [
         {
           name: '安全服务',
@@ -50,6 +95,9 @@ export default {
 </script>
 <style lang="less" scoped>
 /* tab选项样式 */
+.apps {
+  background-color: #eee;
+}
 /deep/.el-tabs__nav {
   display: flex;
   width: 100%;
@@ -71,13 +119,13 @@ export default {
 }
 /* 选中样式 */
 /deep/.is-active {
-  background-color: rgb(233, 233, 233) !important;
+  background-color: #eeeeee !important;
 }
 .el-tabs--border-card > .el-tabs__header {
-  border: 0;
+  // border: 0;
 }
 /deep/.el-tabs--border-card > .el-tabs__content {
-  background-color: rgb(233, 233, 233);
+  background-color: #eeeeee;
   margin-bottom: 55px;
 }
 </style>

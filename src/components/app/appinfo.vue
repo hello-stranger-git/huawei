@@ -55,7 +55,12 @@ export default {
 .appname > p {
   color: #888888;
   font-size: 13px;
+
   overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 .appinstall > button {
   border-radius: 20px;
@@ -65,6 +70,7 @@ export default {
   font-size: 16px;
   line-height: 25px;
   border: none;
+  outline: none;
 }
 
 .appbanner {
