@@ -1,16 +1,16 @@
 <template>
   <div>
     <div style="height:44px">
-      <Header/>
-    </div>
-    <div style="height:46px">
-      <Notice/>
-    </div>
-    <div style="height:100%">
-      <router-view/>
+      <Header />
     </div>
     <div>
-      <Footer/>
+      <Notice />
+    </div>
+    <div>
+      <router-view />
+    </div>
+    <div>
+      <Footer />
     </div>
   </div>
 </template>
@@ -28,6 +28,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
