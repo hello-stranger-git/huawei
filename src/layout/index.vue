@@ -1,7 +1,9 @@
 <template>
-  <div>
-    <Header/>
-    <div>
+  <div style="height:100%">
+    <div style="height:44px">
+      <Header/>
+    </div>
+    <div style="height:46px">
       <Notice/>
     </div>
     <div>

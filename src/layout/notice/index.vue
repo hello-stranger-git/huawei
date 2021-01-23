@@ -13,6 +13,8 @@ export default {
 <style lang="less" scoped>
 .notice{
   position: fixed;
-  margin-top: 44px;
+  width: 100%;
+  height: 46px;
+  background-color:red ;
 }
 </style>
