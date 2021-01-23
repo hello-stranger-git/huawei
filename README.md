@@ -1,4 +1,4 @@
-# huawei
+# module-app
 
 ## Project setup
 ```
