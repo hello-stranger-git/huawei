@@ -1,16 +1,13 @@
-<!--首页-->
+<!--单个菜单组件-->
 <template>
   <div>
-    <Menu/>
+    单个菜单组件
   </div>
 </template>
 
 <script>
-import Menu from './menu'
 export default {
-  components: {
-    Menu
-  }
+
 }
 </script>
 

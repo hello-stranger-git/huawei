@@ -6,7 +6,7 @@
     <div style="height:46px">
       <Notice/>
     </div>
-    <div style="height:100%">
+    <div>
       <router-view/>
     </div>
     <div>
