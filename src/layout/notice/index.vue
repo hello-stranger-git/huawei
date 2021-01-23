@@ -7,7 +7,6 @@
         background="rgb(230, 0, 18)"
         left-icon="volume-o"
         mode="closeable"
-        :scrollable="false"
         @close="closeNotice"
       >
         <span>{{ noticeTxt }}</span>
