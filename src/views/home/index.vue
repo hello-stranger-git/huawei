@@ -43,7 +43,8 @@ export default {
           id: 2,
           title: '工作汇报',
           info: 0,
-          icon: require('@/assets/images/home/workReport.png')
+          icon: require('@/assets/images/home/workReport.png'),
+          path: '/workReport'
         },
         {
           id: 3,

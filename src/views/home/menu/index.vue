@@ -1,7 +1,9 @@
 <!--menu-->
 <template>
   <div class="menu" style="height: 110px;">
-    <MenuItem v-for="item in menuData" :key="item.id" :menuItem="item" />
+    <div v-for="item in menuData" :key="item.id" @click="jumpMenuItem(item.path)">
+    <MenuItem  :menuItem="item"/>
+    </div>
   </div>
 </template>
 
@@ -15,6 +17,12 @@ export default {
   },
   components: {
     MenuItem
+  },
+  methods: {
+    jumpMenuItem(path) {
+      console.log('path')
+      this.$router.push({ path: path })
+    }
   }
 }
 </script>

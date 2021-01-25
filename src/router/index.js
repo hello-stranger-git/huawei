@@ -58,8 +58,13 @@ const routes = [
     path: '/forgetRegist',
     name: 'ForgetRegist',
     component: () => import('@/views/forgetRegist')
+  },
+  // 工作汇报
+  {
+    path: '/workReport',
+    name: 'WorkReport',
+    component: () => import('@/views/workReport')
   }
-
   // {
   //   path: '/about',
   //   name: 'About',
