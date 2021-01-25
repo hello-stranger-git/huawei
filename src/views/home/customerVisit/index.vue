@@ -20,10 +20,10 @@ export default {
   },
   methods: {
     now() {
-      console.log('工作汇报当前')
+      console.log('客户拜访当前')
     },
     more() {
-      console.log('工作汇报更多')
+      console.log('客户拜访更多')
     }
   }
 }
