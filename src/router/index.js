@@ -40,6 +40,12 @@ const routes = [
     path: '/login',
     name: 'Login',
     component: () => import('@/views/login')
+  },
+  // 用户信息界面
+  {
+    path: '/userMessage',
+    name: 'UserMessage',
+    component: () => import('@/views/userMessage')
   }
   // {
   //   path: '/about',

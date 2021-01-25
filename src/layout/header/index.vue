@@ -18,7 +18,7 @@
       </van-col>
       <van-col span="10" class="right">
         <span>{{ userName }}</span>
-        <div class="message">
+        <div class="message" @click="handleMessage">
           <img :src="information" width="24px" height="24px" />
           <div class="noReaderMessage">{{ noReaderMessage }}</div>
         </div>
@@ -60,6 +60,10 @@ export default {
     // 点击遮罩层
     clickOverlay() {
       this.show = false
+    },
+    // 跳转到消息界面
+    handleMessage() {
+      this.$router.push({ name: 'UserMessage' })
     }
   }
 }
