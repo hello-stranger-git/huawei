@@ -4,6 +4,7 @@
     <Menu :menuData="menuData" />
     <CheckWork/>
     <WorkReport/>
+    <CustomerVisit/>
   </div>
 </template>
 
@@ -11,11 +12,13 @@
 import Menu from './menu'
 import CheckWork from './checkWork'
 import WorkReport from './workReport'
+import CustomerVisit from './customerVisit'
 export default {
   components: {
     Menu,
     CheckWork,
-    WorkReport
+    WorkReport,
+    CustomerVisit
   },
   data() {
     return {
