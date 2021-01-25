@@ -54,6 +54,19 @@ export default {
         }
       ]
     }
+  },
+  watch: {
+    // 路由变化改变底部选中
+    $route() {
+      localStorage.setItem('footerBar', this.active)
+    }
+  },
+  mounted() {
+    if (localStorage.getItem('footerBar')) {
+      this.active = Number(localStorage.getItem('footerBar'))
+    } else {
+      localStorage.setItem('footerBar', this.active)
+    }
   }
 }
 </script>
