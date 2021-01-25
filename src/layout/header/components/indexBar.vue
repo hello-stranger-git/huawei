@@ -95,7 +95,8 @@ export default {
       }
     },
     toggleStore(data) {
-      console.log(data)
+      // console.log(data)
+      this.$emit('storeData', data)
     }
   }
 }

@@ -26,7 +26,7 @@
     </van-row>
     <DownPopup :show.sync="show" @clickOverlay="clickOverlay">
       <DownPopupTop />
-      <IndexBar />
+      <IndexBar @storeData="storeData"/>
     </DownPopup>
   </div>
 </template>
@@ -64,6 +64,11 @@ export default {
     // 跳转到消息界面
     handleMessage() {
       this.$router.push({ name: 'UserMessage' })
+    },
+    // 改变选择的门店
+    storeData(data) {
+      this.show = false
+      this.sotoreName = data.name
     }
   }
 }
