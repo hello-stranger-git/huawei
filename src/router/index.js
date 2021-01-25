@@ -16,6 +16,12 @@ const routes = [
         component: () => import('@/views/home/index')
       },
       {
+        // 通讯录
+        path: '/phoneConnect',
+        name: 'PhoneConnect',
+        component: () => import('@/views/phoneConnect/index')
+      },
+      {
         // 商城
         path: '/shop',
         name: 'Shop',
