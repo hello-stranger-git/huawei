@@ -9,27 +9,37 @@ const routes = [
     redirect: '/home',
     component: () => import('@/layout'),
     children: [
+      // 首页
       {
         path: '/home',
         name: 'Home',
         component: () => import('@/views/home/index')
       },
       {
+        // 商城
         path: '/shop',
         name: 'Shop',
         component: () => import('@/views/shop/index')
       },
       {
+        // 应用
         path: '/application',
         name: 'Application',
         component: () => import('@/views/application/index')
       },
       {
+        // 我的
         path: '/user',
         name: 'User',
         component: () => import('@/views/user/index')
       }
     ]
+  },
+  // 登录
+  {
+    path: '/login',
+    name: 'Login',
+    component: () => import('@/views/login')
   }
   // {
   //   path: '/about',
