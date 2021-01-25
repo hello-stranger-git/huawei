@@ -9,6 +9,17 @@
       @more="more"
     >
       <User-item :data="userData"></User-item>
+      <div class="cells">
+        <div class="cell">
+          类型：普通任务
+        </div>
+        <div class="cell">
+          任务内容：续费阿里服务器
+        </div>
+        <div class="cell">
+          待完成时间：2021-01-22
+        </div>
+      </div>
     </Module>
   </div>
 </template>
@@ -44,4 +55,19 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="less" scoped>
+.cells {
+  padding: 24px 16px 0;
+  .cell {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 14px;
+    color: #343434;
+    margin-top: 16px;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+</style>
