@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import MenuItem from '../components/menu/menuItem'
+import MenuItem from './components/menuItem'
 export default {
   props: {
     menuData: {
