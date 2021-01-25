@@ -25,21 +25,28 @@ export default {
           name: '首页'
         },
         {
-          id: 1,
+          id: 2,
+          path: '/phoneConnect',
+          icon: require('@/assets/images/footer/phoneConnect.png'),
+          iconSelect: require('@/assets/images/footer/phoneConnectSelect.png'),
+          name: '通讯录'
+        },
+        {
+          id: 3,
           path: '/shop',
           icon: require('@/assets/images/footer/shop.png'),
           iconSelect: require('@/assets/images/footer/shopSelect.png'),
           name: 'AI商城'
         },
         {
-          id: 2,
+          id: 4,
           path: '/application',
           icon: require('@/assets/images/footer/application.png'),
           iconSelect: require('@/assets/images/footer/applicationSelect.png'),
           name: '应用'
         },
         {
-          id: 3,
+          id: 5,
           path: '/user',
           icon: require('@/assets/images/footer/user.png'),
           iconSelect: require('@/assets/images/footer/userSelect.png'),
