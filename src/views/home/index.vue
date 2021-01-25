@@ -5,6 +5,8 @@
     <CheckWork/>
     <WorkReport/>
     <CustomerVisit/>
+    <TaskManager/>
+    <FeeApplocation/>
   </div>
 </template>
 
@@ -13,12 +15,16 @@ import Menu from './menu'
 import CheckWork from './checkWork'// 考勤
 import WorkReport from './workReport'// 工作汇报
 import CustomerVisit from './customerVisit'// 客户拜访
+import TaskManager from './taskManager'// 任务管理
+import FeeApplocation from './feeApplocation'// 费用申请
 export default {
   components: {
     Menu,
     CheckWork,
     WorkReport,
-    CustomerVisit
+    CustomerVisit,
+    TaskManager,
+    FeeApplocation
   },
   data() {
     return {
