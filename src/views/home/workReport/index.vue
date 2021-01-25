@@ -8,16 +8,7 @@
       @now="now"
       @more="more"
     >
-      <div class="item">
-        <div class="avatar">
-          <img :src="userAvatar" alt="" />
-        </div>
-        <div class="value">
-          <div class="report">刘德华的日报</div>
-          <div class="time">今天18：12</div>
-          <div class="unread">9条未读消息</div>
-        </div>
-      </div>
+      <User-item :data="userData"></User-item>
       <div class="jobs">
         <div class="job">
           今日完成工作：XXXXXXXXXXXXX
@@ -35,15 +26,22 @@
 
 <script>
 import Module from '../components/module'
+import UserItem from '../components/userItem'
 export default {
   data() {
     return {
       workReportIcon: require('@/assets/images/home/workReport/workReport.png'),
-      userAvatar: require('@/assets/images/home/workReport/user.png')
+      userData: {
+        avatar: require('@/assets/images/home/workReport/user.png'),
+        title: '刘德华的日报',
+        time: new Date().toLocaleString(),
+        number: 998
+      }
     }
   },
   components: {
-    Module
+    Module,
+    UserItem
   },
   methods: {
     now() {
@@ -57,46 +55,6 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.item {
-  display: flex;
-  height: 45px;
-  margin: 25px 16px 0;
-  color: #343434;
-
-  .avatar {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    overflow: hidden;
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
-  .value {
-    flex: 1;
-    position: relative;
-    margin-left: 12px;
-    .report {
-      font-weight: 700;
-      font-size: 16px;
-      height: 22px;
-      line-height: 22px;
-    }
-    .time {
-      margin-top: 6px;
-      color: #b7b7b7;
-      font-size: 12px;
-    }
-    .unread {
-      position: absolute;
-      top: 3px;
-      right: 0;
-      color: #b7b7b7;
-      font-size: 12px;
-    }
-  }
-}
 .jobs {
   padding: 24px 16px 0;
   .job {
