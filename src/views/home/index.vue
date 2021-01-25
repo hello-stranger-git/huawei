@@ -3,16 +3,19 @@
   <div>
     <Menu :menuData="menuData" />
     <CheckWork/>
+    <WorkReport/>
   </div>
 </template>
 
 <script>
 import Menu from './menu'
 import CheckWork from './checkWork'
+import WorkReport from './workReport'
 export default {
   components: {
     Menu,
-    CheckWork
+    CheckWork,
+    WorkReport
   },
   data() {
     return {
