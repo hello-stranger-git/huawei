@@ -4,17 +4,17 @@
     <van-row style="height:100%">
       <van-col span="14" class="left">
         <img :src="logo" width="30px" height="30px" />
-        <div @click="hiddenDownPopup">
+        <div @click="hiddenDownPopup" style="white-space: nowrap;text-overflow: ellipsis;overflow: hidden;">
           <span style="font-size:14px;font-weight:400;margin-left:4px">{{
             sotoreName
           }}</span>
+        </div>
           <img
             :src="dropDown"
             width="10px"
             height="10px"
             style="margin-left:3px"
           />
-        </div>
       </van-col>
       <van-col span="10" class="right">
         <span>{{ userName }}</span>
