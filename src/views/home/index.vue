@@ -10,9 +10,9 @@
 
 <script>
 import Menu from './menu'
-import CheckWork from './checkWork'
-import WorkReport from './workReport'
-import CustomerVisit from './customerVisit'
+import CheckWork from './checkWork'// 考勤
+import WorkReport from './workReport'// 工作汇报
+import CustomerVisit from './customerVisit'// 客户拜访
 export default {
   components: {
     Menu,
