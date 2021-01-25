@@ -55,7 +55,6 @@ export default {
 .footer{
   height: 50px;
   box-sizing: border-box;
-  background-color: red;
   position: fixed;
   bottom: 0;
   width: 100%;
