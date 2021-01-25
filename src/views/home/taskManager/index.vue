@@ -1,22 +1,37 @@
 <!--任务管理-->
 <template>
   <div>
-    <Module height="291px" :icon="workReportIcon" title="任务管理" @now="now"  @more="more">
-      任务管理
+    <Module
+      height="291px"
+      :icon="workReportIcon"
+      title="任务管理"
+      @now="now"
+      @more="more"
+    >
+      <User-item :data="userData"></User-item>
     </Module>
   </div>
 </template>
 
 <script>
 import Module from '../components/module'
+import UserItem from '../components/userItem'
+
 export default {
   data() {
     return {
-      workReportIcon: require('@/assets/images/home/taskManager/taskManager.png')
+      workReportIcon: require('@/assets/images/home/taskManager/taskManager.png'),
+      userData: {
+        avatar: require('@/assets/images/home/taskManager/user.png'),
+        title: '刘德华',
+        time: new Date().toLocaleString(),
+        number: 98
+      }
     }
   },
   components: {
-    Module
+    Module,
+    UserItem
   },
   methods: {
     now() {
@@ -29,6 +44,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="less" scoped></style>
