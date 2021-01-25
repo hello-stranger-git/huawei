@@ -6,7 +6,7 @@
     <div>
       <Notice />
     </div>
-    <div style="height:100%;background-color:#eee;margin-bottom: 50px;padding-bottom: 12px;">
+    <div style="height:100%;background-color:#eee;padding-bottom: 62px;">
       <router-view />
     </div>
     <div>
