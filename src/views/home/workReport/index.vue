@@ -18,13 +18,13 @@
       </div>
       <div class="jobs">
         <div class="job">
-          今日完成工作：XXXXXXXXXXXXXXXXX
+          今日完成工作：XXXXXXXXXXXXX
         </div>
         <div class="job">
           未完成工作：XXXXXXXXXXXXXXXXX
         </div>
         <div class="job">
-          需协调工作：XXXXXXXXXXXXXXXXX
+          需协调工作：XXXXXXXXXXXXXXXxxxxxXX
         </div>
       </div>
     </Module>
@@ -90,14 +90,16 @@ export default {
   }
 }
 .jobs {
-  padding-left: 16px;
+  padding: 24px 16px 0;
   .job {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     font-size: 14px;
     color: #343434;
     margin-top: 16px;
     &:first-child {
-      margin-top: 24px;
-      color: red;
+      margin-top: 0;
     }
   }
 }
