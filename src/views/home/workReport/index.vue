@@ -9,7 +9,9 @@
       @more="more"
     >
       <div class="item">
-        <img :src="userAvatar" alt="" />
+        <div class="avatar">
+          <img :src="userAvatar" alt="" />
+        </div>
         <div class="value">
           <div class="report">刘德华的日报</div>
           <div class="time">今天18：12</div>
@@ -61,9 +63,15 @@ export default {
   margin: 25px 16px 0;
   color: #343434;
 
-  img {
+  .avatar {
     width: 45px;
     height: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
   .value {
     flex: 1;
@@ -82,7 +90,7 @@ export default {
     }
     .unread {
       position: absolute;
-      top: 0;
+      top: 3px;
       right: 0;
       color: #b7b7b7;
       font-size: 12px;
