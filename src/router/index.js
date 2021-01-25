@@ -46,7 +46,14 @@ const routes = [
     path: '/userMessage',
     name: 'UserMessage',
     component: () => import('@/views/userMessage')
+  },
+  // 忘记密码以及注册
+  {
+    path: '/forgetRegist',
+    name: 'ForgetRegist',
+    component: () => import('@/views/forgetRegist')
   }
+
   // {
   //   path: '/about',
   //   name: 'About',
