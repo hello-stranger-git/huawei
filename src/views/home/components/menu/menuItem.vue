@@ -5,7 +5,7 @@
       :name="menuItem.icon"
       size="50"
       :badge="
-        menuItem.info < 1 ? false : menuItem.info > 99 ? '99+' : menuItem.info
+        menuItem.info < 1 ? '' : menuItem.info > 99 ? '99+' : menuItem.info
       "
     />
     <p>{{ menuItem.title }}</p>
