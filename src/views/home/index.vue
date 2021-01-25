@@ -35,33 +35,45 @@ export default {
       menuData: [
         {
           id: 1,
-          title: '报警信息',
+          title: '考勤',
           info: 103,
-          icon: require('@/assets/images/home/alarm.png') // 排序图标
+          icon: require('@/assets/images/home/checkWork.png')
         },
         {
           id: 2,
-          title: '待整改',
+          title: '工作汇报',
           info: 0,
-          icon: require('@/assets/images/home/repair.png') // 排序图标
+          icon: require('@/assets/images/home/workReport.png')
         },
         {
           id: 3,
-          title: '缺勤',
+          title: '客户拜访',
           info: 3,
-          icon: require('@/assets/images/home/absence.png') // 排序图标
+          icon: require('@/assets/images/home/customerVisit.png')
         },
         {
           id: 4,
-          title: '商城',
+          title: '任务管理',
           info: 20,
-          icon: require('@/assets/images/home/shop.png') // 排序图标
+          icon: require('@/assets/images/home/taskManager.png')
         },
         {
           id: 5,
-          title: '巡查统计',
+          title: '费用申请',
           info: 0,
-          icon: require('@/assets/images/home/checkCount.png') // 排序图标
+          icon: require('@/assets/images/home/feeApplocation.png')
+        },
+        {
+          id: 6,
+          title: '出差申请',
+          info: 0,
+          icon: require('@/assets/images/home/travelRequest.png')
+        },
+        {
+          id: 7,
+          title: '通讯录',
+          info: 0,
+          icon: require('@/assets/images/home/phoneBook.png')
         }
       ]
     }

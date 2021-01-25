@@ -21,7 +21,6 @@ export default {
   },
   data() {
     return {
-      alarm: require('@/assets/images/home/alarm.png')
     }
   }
 }
