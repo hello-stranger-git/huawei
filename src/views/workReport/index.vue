@@ -2,14 +2,29 @@
 <template>
   <div>
     <TopTitle title="工作汇报" @onClickLeft="onClickLeft"/>
+    <WorkReportItem/>
   </div>
 </template>
 
 <script>
 import TopTitle from '@/components/topTitle'
+import WorkReportItem from './components/workReportItem'
 export default {
+  data() {
+    return {
+      WorkReportData: [
+        {
+          id: 1,
+          icon: require('@/assets/images/workReport/daily.png'),
+          title: '日报',
+          path: ''
+        }
+      ]
+    }
+  },
   components: {
-    TopTitle
+    TopTitle,
+    WorkReportItem
   },
   methods: {
     onClickLeft() {
