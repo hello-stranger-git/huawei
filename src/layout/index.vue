@@ -20,10 +20,21 @@ import Header from './header'
 import Footer from './footer'
 import Notice from './notice'
 export default {
+  data() {
+    return {
+      activeFooter: 0
+    }
+  },
   components: {
     Header,
     Footer,
     Notice
+  },
+  watch: {
+    // 路由变化改变底部选中
+    $route() {
+      this.activeFooter = localStorage.getItem('footerBar')
+    }
   }
 }
 </script>

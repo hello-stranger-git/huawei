@@ -1,13 +1,16 @@
 <!--通讯录-->
 <template>
   <div>
-通讯录
+    <TopTitle title="通讯录" :leftArrowHidden="false"/>
   </div>
 </template>
 
 <script>
+import TopTitle from '@/components/topTitle'
 export default {
-
+  components: {
+    TopTitle
+  }
 }
 </script>
 

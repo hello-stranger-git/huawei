@@ -1,6 +1,6 @@
 <template>
   <div>
-    <van-nav-bar :title="title" :left-text="leftText" left-arrow @click-left="onClickLeft" @click-right="onClickRight">
+    <van-nav-bar :title="title" :left-text="leftText" :left-arrow="leftArrowHidden" @click-left="onClickLeft" @click-right="onClickRight">
       <template #right>
         <!--右边插槽-->
         <slot />
@@ -21,6 +21,11 @@ export default {
     leftText: {
       type: String,
       default: ''
+    },
+    // 左侧是否显示
+    leftArrowHidden: {
+      type: Boolean,
+      default: true
     }
   },
   methods: {
