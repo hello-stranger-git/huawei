@@ -7,6 +7,7 @@
     <CustomerVisit/>
     <TaskManager/>
     <FeeApplocation/>
+    <TravelRequest/>
   </div>
 </template>
 
@@ -17,6 +18,7 @@ import WorkReport from './workReport'// 工作汇报
 import CustomerVisit from './customerVisit'// 客户拜访
 import TaskManager from './taskManager'// 任务管理
 import FeeApplocation from './feeApplocation'// 费用申请
+import TravelRequest from './travelRequest'// 费用申请
 export default {
   components: {
     Menu,
@@ -24,7 +26,8 @@ export default {
     WorkReport,
     CustomerVisit,
     TaskManager,
-    FeeApplocation
+    FeeApplocation,
+    TravelRequest
   },
   data() {
     return {
