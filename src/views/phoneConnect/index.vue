@@ -2,7 +2,7 @@
 <template>
   <div>
     <TopTitle title="通讯录" :leftArrowHidden="false"/>
-    <DepartmentGroupItem v-for="item in DepartmentGroupData" :key="item.id" :leftIcon="item.leftIcon" :title="item.title" :rightIcon="item.rightIcon" :borderBoolean="true"/>
+    <DepartmentGroupItem @groupItemHandle="groupItemHandle(item.name)" v-for="item in DepartmentGroupData" :key="item.id" :leftIcon="item.leftIcon" :title="item.title" :rightIcon="item.rightIcon" :borderBoolean="true"/>
   </div>
 </template>
 
@@ -17,9 +17,15 @@ export default {
           id: 1,
           leftIcon: require('@/assets/images/phoneConnect/itemIcon.png'),
           rightIcon: require('@/assets/images/phoneConnect/messageIcon.png'),
-          title: '周边部门(1)'
+          title: '周边部门(1)',
+          name: 'around'
         }
       ]
+    }
+  },
+  methods: {
+    groupItemHandle(name) {
+      console.log(name)
     }
   },
   components: {

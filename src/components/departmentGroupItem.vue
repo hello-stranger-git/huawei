@@ -1,6 +1,6 @@
 <!--单个部门分组-->
 <template>
-  <div class="departmentGroupItem">
+  <div class="departmentGroupItem" @click="groupItemHandle">
     <div class="left">
       <img :src="leftIcon"  v-if="leftIcon"/>
     </div>
@@ -29,6 +29,11 @@ export default {
     borderBoolean: {
       type: Boolean,
       default: true
+    }
+  },
+  methods: {
+    groupItemHandle() {
+      this.$emit('groupItemHandle')
     }
   },
   mounted() {
