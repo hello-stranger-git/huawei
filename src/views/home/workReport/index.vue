@@ -1,15 +1,28 @@
 <!--工作汇报-->
 <template>
-  <div class="contain">
+  <div class="workReport">
+    <!-- 头部区域 -->
     <TopTitle title="工作汇报" @onClickLeft="onClickLeft" />
-    <WorkReportItem :data="WorkReportData" />
+    <!-- 内容区域 -->
+    <div class="workReport_content">
+      <SmallIconItem
+        v-for="(item, i) in WorkReportData"
+        :key="i"
+        :title="item.title"
+        :icon="item.icon"
+      />
+    </div>
   </div>
 </template>
 
 <script>
 import TopTitle from '@/components/topTitle'
-import WorkReportItem from './components/workReportItem'
+import SmallIconItem from '@/components/smallIconItem'
 export default {
+  components: {
+    TopTitle,
+    SmallIconItem
+  },
   data() {
     return {
       WorkReportData: [
@@ -17,7 +30,7 @@ export default {
           id: 1,
           icon: require('@/assets/images/home/workReport/daily.png'),
           title: '日报',
-          name: 'Home'
+          name: ''
         },
         {
           id: 2,
@@ -40,10 +53,6 @@ export default {
       ]
     }
   },
-  components: {
-    TopTitle,
-    WorkReportItem
-  },
   methods: {
     onClickLeft() {
       this.$router.go(-1)
@@ -53,11 +62,21 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.contain {
+.workReport {
   background-color: #fff;
   min-height: 100%;
 }
+// 头部
 /deep/.van-hairline--bottom::after {
   border: none;
+}
+// 内容区域
+.workReport_content {
+  display: flex;
+  flex-wrap: wrap;
+  .smallIconItem {
+    margin-left: 3.2%;
+    margin-top: 12px;
+  }
 }
 </style>

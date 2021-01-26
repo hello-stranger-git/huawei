@@ -99,7 +99,7 @@ export default {
   // 进度条样式
   .process {
     display: flex;
-    height: 26px;
+    height: 32px;
     justify-content: space-between;
   }
   .van-row {
@@ -146,7 +146,7 @@ export default {
   border-right: 5px solid transparent;
   border-bottom: 5px solid red;
   position: absolute;
-  bottom: -6px;
+  bottom: -9px;
   left: 50%;
   transform: translateX(-50%);
 }
