@@ -1,12 +1,14 @@
-<!--工作汇报-->
+<!--日报-->
 <template>
-  <div class="workReport">
+  <div class="daily">
     <!-- 头部区域 -->
-    <TopTitle title="工作汇报" @onClickLeft="onClickLeft" />
+    <TopTitle title="日报" @onClickLeft="onClickLeft" @onClickRight="onClickRight">
+      <img :src="addIcon" width="24px" height="24px">
+    </TopTitle>
     <!-- 内容区域 -->
-    <div class="workReport_content">
+    <div class="content">
       <SmallIconItem
-        v-for="(item, i) in WorkReportData"
+        v-for="(item, i) in dailyData"
         :key="i"
         :title="item.title"
         :icon="item.icon"
@@ -26,52 +28,47 @@ export default {
   },
   data() {
     return {
-      WorkReportData: [
+      dailyData: [
         {
           id: 1,
-          icon: require('@/assets/images/home/workReport/daily.png'),
-          title: '日报',
-          name: 'Daily'
+          icon: require('@/assets/images/home/workReport/mySubmitIcon.png'),
+          title: '我提交的',
+          name: ''
         },
         {
           id: 2,
-          icon: require('@/assets/images/home/workReport/weekly.png'),
-          title: '周报',
+          icon: require('@/assets/images/home/workReport/reportToMeIcon.png'),
+          title: '报告给我的',
           name: ''
         },
         {
           id: 3,
-          icon: require('@/assets/images/home/workReport/monthly.png'),
-          title: '月报',
-          name: ''
-        },
-        {
-          id: 4,
-          icon: require('@/assets/images/home/workReport/businessDaily.png'),
-          title: '营业日报',
+          icon: require('@/assets/images/home/workReport/ccToMeIcon.png'),
+          title: '抄送我的',
           name: ''
         }
-      ]
+      ],
+      addIcon: require('@/assets/images/home/workReport/addIcon.png')
     }
   },
   methods: {
     onClickLeft() {
       this.$router.go(-1)
     },
-    smallItemHandle(name) {
-      this.$router.push({ name: name })
+    onClickRight() {
+      this.$router.push({ name: 'DailyDetail' })
     }
   }
 }
 </script>
 
 <style lang="less" scoped>
-.workReport {
+.daily{
   background-color: #fff;
   min-height: 100%;
 }
 // 内容区域
-.workReport_content {
+.content {
   display: flex;
   flex-wrap: wrap;
   .smallIconItem {

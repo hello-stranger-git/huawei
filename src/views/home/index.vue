@@ -40,10 +40,10 @@ export default {
           icon: require('@/assets/images/home/checkWork.png')
         },
         {
-          id: 8,
+          id: 3,
           title: '客户管理',
           info: 0,
-          icon: require('@/assets/images/home/checkWork.png'),
+          icon: require('@/assets/images/home/customerVisit.png'),
           name: 'CustomerMannager'
         },
         {
@@ -54,16 +54,11 @@ export default {
           name: 'WorkReport'
         },
         {
-          id: 3,
-          title: '客户拜访',
-          info: 3,
-          icon: require('@/assets/images/home/customerVisit.png')
-        },
-        {
           id: 4,
           title: '任务管理',
           info: 20,
-          icon: require('@/assets/images/home/taskManager.png')
+          icon: require('@/assets/images/home/taskManager.png'),
+          name: 'TaskManager'
         },
         {
           id: 5,
@@ -79,9 +74,21 @@ export default {
         },
         {
           id: 7,
-          title: '通讯录',
+          title: '请假申请',
           info: 0,
-          icon: require('@/assets/images/home/phoneBook.png')
+          icon: require('@/assets/images/home/vacationApplicationIcon.png')
+        },
+        {
+          id: 8,
+          title: '外出公告',
+          info: 0,
+          icon: require('@/assets/images/home/outApplicationIcon.png')
+        },
+        {
+          id: 9,
+          title: '内部公告',
+          info: 0,
+          icon: require('@/assets/images/home/insideNotice.png')
         }
       ]
     }

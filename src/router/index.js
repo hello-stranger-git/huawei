@@ -76,7 +76,26 @@ const routes = [
     path: '/home/customerMannager',
     name: 'CustomerMannager',
     component: () => import('@/views/home/customerMannager')
+  },
+  // 日报
+  {
+    path: '/home/workDaily/daily',
+    name: 'Daily',
+    component: () => import('@/views/home/daily')
+  },
+  // 日报详情
+  {
+    path: '/home/workDaily/daily/dailyDetail',
+    name: 'DailyDetail',
+    component: () => import('@/views/home/dailyDetail')
+  },
+  // 任务管理
+  {
+    path: '/home/taskManager',
+    name: 'TaskManager',
+    component: () => import('@/views/home/taskManager')
   }
+
 ]
 
 const router = new VueRouter({
