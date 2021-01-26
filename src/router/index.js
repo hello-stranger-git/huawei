@@ -64,6 +64,12 @@ const routes = [
     path: '/workReport',
     name: 'WorkReport',
     component: () => import('@/views/workReport')
+  },
+  // 工作日报
+  {
+    path: '/workDaily',
+    name: 'WorkDaily',
+    component: () => import('@/views/home/workDaily')
   }
   // {
   //   path: '/about',
