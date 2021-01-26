@@ -52,4 +52,8 @@ export default {
   color: #000000;
   font-size: 19px;
 }
+// 头部
+/deep/.van-hairline--bottom::after {
+  border: none;
+}
 </style>
