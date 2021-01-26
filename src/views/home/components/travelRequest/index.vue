@@ -34,8 +34,8 @@
 </template>
 
 <script>
-import Module from '../components/module'
-import UserItem from '../components/userItem'
+import Module from '../module'
+import UserItem from '../userItem'
 
 export default {
   data() {

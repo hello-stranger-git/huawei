@@ -12,13 +12,13 @@
 </template>
 
 <script>
-import Menu from './menu'
+import Menu from './components/menu'
 import CheckWork from './checkWork'// 考勤
-import WorkReport from './workReport'// 工作汇报
-import CustomerVisit from './customerVisit'// 客户拜访
-import TaskManager from './taskManager'// 任务管理
-import FeeApplocation from './feeApplocation'// 费用申请
-import TravelRequest from './travelRequest'// 出差申请
+import WorkReport from './components/workReport'// 工作汇报
+import CustomerVisit from './components/customerVisit'// 客户拜访
+import TaskManager from './components/taskManager'// 任务管理
+import FeeApplocation from './components/feeApplocation'// 费用申请
+import TravelRequest from './components/travelRequest'// 出差申请
 export default {
   components: {
     Menu,
