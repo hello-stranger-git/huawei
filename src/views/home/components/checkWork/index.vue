@@ -123,7 +123,7 @@ export default {
     },
     select(fr) {
       this.Frequency = fr
-      console.log(111)
+      console.log(fr)
     }
   }
 }
