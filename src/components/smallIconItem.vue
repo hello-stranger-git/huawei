@@ -1,6 +1,6 @@
 <!--工作汇报每一项-->
 <template>
-  <div class="smallIconItem">
+  <div class="smallIconItem" @click="smallItemHandle">
     <img :src="icon" />
     <p>{{ title }}</p>
     <div v-if="count">{{ count }}</div>
@@ -24,7 +24,11 @@ export default {
   data() {
     return {}
   },
-  methods: {}
+  methods: {
+    smallItemHandle() {
+      this.$emit('smallItemHandle')
+    }
+  }
 }
 </script>
 

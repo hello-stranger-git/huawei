@@ -10,6 +10,7 @@
         :key="i"
         :title="item.title"
         :icon="item.icon"
+        @smallItemHandle="smallItemHandle(item.name)"
       />
     </div>
   </div>
@@ -30,7 +31,7 @@ export default {
           id: 1,
           icon: require('@/assets/images/home/workReport/daily.png'),
           title: '日报',
-          name: ''
+          name: 'Daily'
         },
         {
           id: 2,
@@ -56,6 +57,9 @@ export default {
   methods: {
     onClickLeft() {
       this.$router.go(-1)
+    },
+    smallItemHandle(name) {
+      this.$router.push({ name: name })
     }
   }
 }

@@ -76,6 +76,12 @@ const routes = [
     path: '/home/customerMannager',
     name: 'CustomerMannager',
     component: () => import('@/views/home/customerMannager')
+  },
+  // 日报
+  {
+    path: '/home/workDaily/daily',
+    name: 'Daily',
+    component: () => import('@/views/home/daily')
   }
 ]
 
