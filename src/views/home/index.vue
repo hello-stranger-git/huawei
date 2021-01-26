@@ -57,7 +57,8 @@ export default {
           id: 4,
           title: '任务管理',
           info: 20,
-          icon: require('@/assets/images/home/taskManager.png')
+          icon: require('@/assets/images/home/taskManager.png'),
+          name: 'TaskManager'
         },
         {
           id: 5,

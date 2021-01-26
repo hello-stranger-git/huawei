@@ -1,4 +1,4 @@
-<!--工作汇报每一项-->
+<!--小图标每一项-->
 <template>
   <div class="smallIconItem" @click="smallItemHandle">
     <img :src="icon" />

@@ -88,6 +88,12 @@ const routes = [
     path: '/home/workDaily/daily/dailyDetail',
     name: 'DailyDetail',
     component: () => import('@/views/home/dailyDetail')
+  },
+  // 任务管理
+  {
+    path: '/home/taskManager',
+    name: 'TaskManager',
+    component: () => import('@/views/home/taskManager')
   }
 
 ]

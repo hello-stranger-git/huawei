@@ -70,10 +70,6 @@ export default {
   background-color: #fff;
   min-height: 100%;
 }
-// 头部
-/deep/.van-hairline--bottom::after {
-  border: none;
-}
 // 内容区域
 .workReport_content {
   display: flex;
