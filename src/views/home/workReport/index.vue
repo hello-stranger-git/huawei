@@ -15,7 +15,7 @@ export default {
       WorkReportData: [
         {
           id: 1,
-          icon: require('@/assets/images/workReport/daily.png'),
+          icon: require('@/assets/images/home/workReport/daily.png'),
           title: '日报',
           name: ''
         }
