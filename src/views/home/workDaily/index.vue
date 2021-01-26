@@ -46,58 +46,18 @@
     <div class="content">
       <div class="title">报告人</div>
       <div class="text flex">
-        <div class="person">
-          <img :src="reportPerson" />
-          <div class="name">张学友</div>
-        </div>
-        <div class="person">
-          <img :src="reportPerson" />
-          <div class="name">张学友</div>
-        </div>
-        <div class="person">
-          <img :src="reportPerson" />
-          <div class="name">张学友</div>
-        </div>
-        <div class="person">
-          <img :src="reportPerson" />
-          <div class="name">张学友</div>
-        </div>
-        <div class="person">
-          <img :src="reportPerson" />
-          <div class="name">张学友</div>
-        </div>
-        <div class="person">
-          <img :src="reportPerson" />
-          <div class="name">张学友</div>
-        </div>
-        <div class="person">
-          <img :src="reportPerson" />
-          <div class="name">张学友</div>
-        </div>
-        <div class="person">
-          <img :src="reportPerson" />
-          <div class="name">张学友</div>
-        </div>
-        <div class="person">
-          <img :src="reportPerson" />
-          <div class="name">张学友</div>
-        </div>
-        <div class="person">
-          <img :src="reportPerson" />
-          <div class="name">张学友</div>
-        </div>
-        <div class="person">
-          <img :src="reportPerson" />
-          <div class="name">张学友</div>
+        <div class="person" v-for="item in reportPersonData" :key="item.id">
+          <img :src="item.user" />
+          <div class="name">{{ item.name }}</div>
         </div>
       </div>
     </div>
     <div class="content">
       <div class="title">抄送人</div>
       <div class="text flex">
-        <div class="person">
-          <img :src="reportPerson" />
-          <div class="name">张学友</div>
+        <div class="person"  v-for="item in ccToData" :key="item.id">
+          <img :src="item.user" />
+          <div class="name">{{ item.name }}</div>
         </div>
       </div>
     </div>
@@ -110,13 +70,23 @@ export default {
   data() {
     return {
       shareIcon: require('@/assets/images/home/workDaily/share.png'),
-      reportPerson: require('@/assets/images/home/workDaily/userIcon.png'),
+      // 报告人
+      reportPersonData: [{
+        id: 1,
+        user: require('@/assets/images/home/workDaily/userIcon.png'),
+        name: '张学友'
+      }],
+      // 抄送人
+      ccToData: [{
+        id: 1,
+        user: require('@/assets/images/home/workDaily/userIcon.png'),
+        name: '张学友'
+      }],
       data: {}
     }
   },
   mounted() {
     this.data = this.$route.params.data
-    console.log(this.data)
   },
   methods: {
     // 点击左边按钮

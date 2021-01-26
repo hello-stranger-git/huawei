@@ -69,7 +69,7 @@ const routes = [
   {
     path: '/workDaily',
     name: 'WorkDaily',
-    component: () => import('@/views/workDaily')
+    component: () => import('@/views/home/workDaily')
   }
   // {
   //   path: '/about',
