@@ -8,7 +8,7 @@
       @now="now"
       @more="more"
     >
-      <User-item :data="userData"></User-item>
+      <User-item :data="userData" @handleUser="handleUser"></User-item>
       <div class="jobs">
         <div class="job">
           今日完成工作：XXXXXXXXXXXXX
@@ -32,6 +32,7 @@ export default {
     return {
       workReportIcon: require('@/assets/images/home/workReport/workReport.png'),
       userData: {
+        id: 1,
         avatar: require('@/assets/images/home/workReport/user.png'),
         title: '刘德华的日报',
         time: new Date().toLocaleString(),
@@ -49,6 +50,10 @@ export default {
     },
     more() {
       console.log('工作汇报更多')
+    },
+    // 点击头像
+    handleUser(data) {
+      this.$router.push({ name: 'WorkDaily', params: { data: data } })
     }
   }
 }

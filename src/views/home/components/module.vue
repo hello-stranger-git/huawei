@@ -57,14 +57,14 @@ export default {
         margin-right: 28px;
         font-size: 16px;
         font-weight: bold;
-        color: #4A92FF;
+        color:#E60012;
         position: relative;
         &::after{
           content: '';
           display: inline-block;
           width: 16px;
           height: 2px;
-          background: #4A92FF;
+          background: #E60012;
           border-radius: 2px;
           position: absolute;
           bottom: -5px;
