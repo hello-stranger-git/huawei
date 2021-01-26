@@ -63,7 +63,7 @@ const routes = [
   {
     path: '/workReport',
     name: 'WorkReport',
-    component: () => import('@/views/workReport')
+    component: () => import('@/views/home/workReport')
   },
   // 工作日报
   {

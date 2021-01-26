@@ -17,7 +17,7 @@ export default {
           id: 1,
           icon: require('@/assets/images/workReport/daily.png'),
           title: '日报',
-          path: ''
+          name: ''
         }
       ]
     }

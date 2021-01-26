@@ -44,7 +44,7 @@ export default {
           title: '工作汇报',
           info: 0,
           icon: require('@/assets/images/home/workReport.png'),
-          path: '/workReport'
+          name: 'WorkReport'
         },
         {
           id: 3,
