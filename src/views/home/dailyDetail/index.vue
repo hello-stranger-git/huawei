@@ -1,11 +1,11 @@
-<!--日报-->
+<!--日报详情-->
 <template>
   <div>
     <!-- 头部区域 -->
     <TopTitle title="日报" @onClickLeft="onClickLeft" @onClickRight="onClickRight">
-      <img :src="addIcon" width="24px" height="24px">
+      <span>提交</span>
     </TopTitle>
-    日报
+日报详情
   </div>
 </template>
 
@@ -15,22 +15,21 @@ export default {
   components: {
     TopTitle
   },
-  data() {
-    return {
-      addIcon: require('@/assets/images/home/workReport/addIcon.png')
-    }
-  },
   methods: {
     onClickLeft() {
       this.$router.go(-1)
     },
     onClickRight() {
-      this.$router.push({ name: 'DailyDetail' })
+      console.log('点击提交')
     }
   }
 }
 </script>
 
-<style lang="scss" scoped>
-
+<style lang="less" scoped>
+.van-nav-bar__right{
+  font-size: 14px;
+  font-weight: 400;
+  color: #343434;
+}
 </style>

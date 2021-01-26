@@ -82,7 +82,14 @@ const routes = [
     path: '/home/workDaily/daily',
     name: 'Daily',
     component: () => import('@/views/home/daily')
+  },
+  // 日报详情
+  {
+    path: '/home/workDaily/daily/dailyDetail',
+    name: 'DailyDetail',
+    component: () => import('@/views/home/dailyDetail')
   }
+
 ]
 
 const router = new VueRouter({
