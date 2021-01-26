@@ -63,7 +63,13 @@ const routes = [
   {
     path: '/workReport',
     name: 'WorkReport',
-    component: () => import('@/views/workReport')
+    component: () => import('@/views/home/workReport')
+  },
+  // 工作日报
+  {
+    path: '/workDaily',
+    name: 'WorkDaily',
+    component: () => import('@/views/workDaily')
   }
   // {
   //   path: '/about',

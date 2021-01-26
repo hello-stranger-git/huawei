@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div style="height:44px">
+    <div style="height:44px" v-if="$route.name!=='PhoneConnect'">
       <Header />
     </div>
-    <div>
+    <div  v-if="$route.name!=='PhoneConnect'">
       <Notice />
     </div>
     <div style="height:100%;background-color:#eee;padding-bottom: 62px;">
@@ -22,19 +22,13 @@ import Notice from './notice'
 export default {
   data() {
     return {
-      activeFooter: 0
+      activeFooter: 1
     }
   },
   components: {
     Header,
     Footer,
     Notice
-  },
-  watch: {
-    // 路由变化改变底部选中
-    $route() {
-      this.activeFooter = localStorage.getItem('footerBar')
-    }
   }
 }
 </script>

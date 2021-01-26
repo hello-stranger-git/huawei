@@ -1,7 +1,7 @@
 <template>
   <div class="item">
     <div class="avatar">
-      <img :src="data.avatar" alt="" />
+      <img :src="data.avatar" alt="" @click="handleUser(data)"/>
     </div>
     <div class="value">
       <div class="report">{{ data.title }}</div>
@@ -18,6 +18,7 @@ export default {
       type: Object,
       default: () => {
         return {
+          id: 0,
           avatar: '',
           title: '',
           time: '',
@@ -26,7 +27,12 @@ export default {
       }
     }
   },
-  mounted() {}
+  mounted() {},
+  methods: {
+    handleUser(data) {
+      this.$emit('handleUser', data)
+    }
+  }
 }
 </script>
 

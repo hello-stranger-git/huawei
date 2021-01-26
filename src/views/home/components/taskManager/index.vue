@@ -1,10 +1,10 @@
-<!--费用申请-->
+<!--任务管理-->
 <template>
   <div>
     <Module
-      height="242px"
+      height="291px"
       :icon="workReportIcon"
-      title="费用申请"
+      title="任务管理"
       @now="now"
       @more="more"
     >
@@ -14,15 +14,15 @@
 </template>
 
 <script>
-import Module from '../components/module'
-import UserItem from '../components/userItem'
+import Module from '../module'
+import UserItem from '../userItem'
 
 export default {
   data() {
     return {
-      workReportIcon: require('@/assets/images/home/feeApplocation/feeApplocation.png'),
+      workReportIcon: require('@/assets/images/home/taskManager/taskManager.png'),
       userData: {
-        avatar: require('@/assets/images/home/workReport/user.png'),
+        avatar: require('@/assets/images/home/taskManager/user.png'),
         title: '刘德华',
         time: new Date().toLocaleString(),
         number: 98
@@ -35,13 +35,13 @@ export default {
   },
   methods: {
     now() {
-      console.log('费用申请当前')
+      console.log('任务管理当前')
     },
     more() {
-      console.log('费用申请更多')
+      console.log('任务管理更多')
     }
   }
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="less" scoped></style>
