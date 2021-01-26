@@ -13,11 +13,13 @@
       <div class="cells">
         <div class="cell">
           <div class="proprety">客户：</div>
-          <div class="value">天猫小店李老板</div>
+          <div class="value">
+            天猫小店李老板天猫小店李老板天猫小店李老板天猫小店李老板
+          </div>
         </div>
         <div class="cell">
           <div class="proprety">拜访内容：</div>
-          <div class="value overText">
+          <div class=" overText">
             向客户推销本公司的产品以及了解客户 需求
             向客户推销本公司的产品以及了解客户 需求
             向客户推销本公司的产品以及了解客户 需求
@@ -70,6 +72,9 @@ export default {
     color: #343434;
     .value {
       flex: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
     &:first-child {
       padding-top: 0;
@@ -77,8 +82,10 @@ export default {
   }
 }
 .overText {
+  flex: 1;
   overflow: hidden;
   text-overflow: ellipsis;
+
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;

@@ -40,6 +40,13 @@ export default {
           icon: require('@/assets/images/home/checkWork.png')
         },
         {
+          id: 8,
+          title: '客户管理',
+          info: 0,
+          icon: require('@/assets/images/home/checkWork.png'),
+          name: 'CustomerMannager'
+        },
+        {
           id: 2,
           title: '工作汇报',
           info: 0,

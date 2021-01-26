@@ -61,24 +61,22 @@ const routes = [
   },
   // 工作汇报
   {
-    path: '/workReport',
+    path: '/home/workReport',
     name: 'WorkReport',
     component: () => import('@/views/home/workReport')
   },
   // 工作日报
   {
-    path: '/workDaily',
+    path: '/home/workDaily',
     name: 'WorkDaily',
     component: () => import('@/views/home/workDaily')
+  },
+  // 客户管理
+  {
+    path: '/home/customerMannager',
+    name: 'CustomerMannager',
+    component: () => import('@/views/home/customerMannager')
   }
-  // {
-  //   path: '/about',
-  //   name: 'About',
-  //   // route level code-splitting
-  //   // this generates a separate chunk (about.[hash].js) for this route
-  //   // which is lazy-loaded when the route is visited.
-  //   component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  // }
 ]
 
 const router = new VueRouter({
