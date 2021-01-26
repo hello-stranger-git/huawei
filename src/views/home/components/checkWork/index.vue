@@ -145,7 +145,6 @@ export default {
     img {
       width: 24px;
       height: 24px;
-      margin-left: 6px;
       vertical-align: middle;
     }
     span {
