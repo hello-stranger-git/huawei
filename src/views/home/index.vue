@@ -13,7 +13,7 @@
 
 <script>
 import Menu from './components/menu'
-import CheckWork from './checkWork'// 考勤
+import CheckWork from './components/checkWork'// 考勤
 import WorkReport from './components/workReport'// 工作汇报
 import CustomerVisit from './components/customerVisit'// 客户拜访
 import TaskManager from './components/taskManager'// 任务管理
