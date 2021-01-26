@@ -100,7 +100,7 @@ export default {
       width: 7px;
       height: 12px;
       transform: translateY(2px);
-      padding: 0 10 px;
+      padding: 0 10px;
     }
   }
 }
