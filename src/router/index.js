@@ -119,6 +119,12 @@ const routes = [
     name: 'AddCustomerVisit',
     component: () => import('@/views/home/addCustomerVisit')
   },
+  // 客户
+  {
+    path: '/home/customerMannager/customerConnect',
+    name: 'CustomerConnect',
+    component: () => import('@/views/home/customerConnect')
+  },
   // 新增市场调查
   {
     path: '/home/customerMannager/addMarketResearch',
