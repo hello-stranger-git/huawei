@@ -131,6 +131,12 @@ const routes = [
     name: 'AddCompeteManager',
     component: () => import('@/views/home/addCompeteManager')
   },
+  // 新增费用申请
+  {
+    path: '/home/addFeeApplocation',
+    name: 'AddFeeApplocation',
+    component: () => import('@/views/home/addFeeApplocation')
+  },
   // 任务管理
   {
     path: '/home/taskManager',
