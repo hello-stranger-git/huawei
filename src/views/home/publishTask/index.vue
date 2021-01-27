@@ -78,16 +78,18 @@
       </div>
     </DownPopup>
     <!-- 时间选择器 -->
-    <van-datetime-picker
-      v-if="datePickerShow"
-      v-model="currentDate"
-      type="date"
-      title="选择时间"
-      :formatter="formatter"
-      @cancel="cancelPcik"
-      @confirm="confirmPick"
-      :min-date="minDate"
-    />
+    <van-overlay :show="datePickerShow" @click="datePickerShow = false">
+      <van-datetime-picker
+        v-if="datePickerShow"
+        v-model="currentDate"
+        type="date"
+        title="选择时间"
+        :formatter="formatter"
+        @cancel="cancelPcik"
+        @confirm="confirmPick"
+        :min-date="minDate"
+      />
+    </van-overlay>
   </div>
 </template>
 
@@ -183,6 +185,7 @@ export default {
     // 关闭弹出框
     closePopup() {
       this.dialogShow = false
+      this.datePickerShow = false
     },
     // 打开弹出框
     openSelected(arr, index) {
@@ -193,6 +196,7 @@ export default {
     // 确认选中值
     confirmPopup() {
       this.dialogShow = false
+      this.datePickerShow = false
       this.task[this.taskAttrArr[this.taskAttrindex]] = this.currentValue
       this.currentIndex = null
       this.currentValue = null
@@ -293,5 +297,10 @@ export default {
 }
 .van-popup {
   position: relative;
+}
+.van-picker {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 </style>
