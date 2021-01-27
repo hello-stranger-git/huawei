@@ -34,6 +34,12 @@ export default {
           id: 1,
           icon: require('@/assets/images/home/customerMannager/customerIcon.png'),
           title: '客户',
+          name: ''
+        },
+        {
+          id: 2,
+          icon: require('@/assets/images/home/customerMannager/visitIcon.png'),
+          title: '拜访',
           name: 'InsideManager', // 当前要跳转的路由
           from: 'CustomerMannager', // 当前路由
           to: 'DailyDetail', // 点击加号要跳转的路由
@@ -51,12 +57,6 @@ export default {
               name: ''
             }
           ]
-        },
-        {
-          id: 2,
-          icon: require('@/assets/images/home/customerMannager/visitIcon.png'),
-          title: '拜访',
-          name: ''
         },
         {
           id: 3,
