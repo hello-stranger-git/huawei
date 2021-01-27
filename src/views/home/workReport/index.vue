@@ -10,7 +10,15 @@
         :key="i"
         :title="item.title"
         :icon="item.icon"
-        @smallItemHandle="smallItemHandle(item.name,item.title,item.data,item.from,item.to)"
+        @smallItemHandle="
+          smallItemHandle(
+            item.name,
+            item.title,
+            item.sonName,
+            item.from,
+            item.to
+          )
+        "
       />
     </div>
   </div>
@@ -34,23 +42,17 @@ export default {
           name: 'InsideManager', // 当前要跳转的路由
           from: 'WorkReport', // 当前路由
           to: 'DailyDetail', // 点击加号要跳转的路由
-          data: [
+          sonName: [
             {
-              id: 1,
-              icon: require('@/assets/images/home/workReport/mySubmitIcon.png'),
-              title: '我提交的',
+              id: 1, // 此id与insideManager组件的id一致
               name: ''
             },
             {
               id: 2,
-              icon: require('@/assets/images/home/workReport/reportToMeIcon.png'),
-              title: '报告给我的',
               name: ''
             },
             {
               id: 3,
-              icon: require('@/assets/images/home/workReport/ccToMeIcon.png'),
-              title: '抄送我的',
               name: ''
             }
           ]
@@ -80,8 +82,11 @@ export default {
     onClickLeft() {
       this.$router.push({ name: 'Home' })
     },
-    smallItemHandle(name, title, data, from, to) {
-      this.$router.push({ name: name, params: { title: title, data: data, from: from, to: to } })
+    smallItemHandle(name, title, sonName, from, to) {
+      this.$router.push({
+        name: name,
+        params: { title: title, sonName: sonName, from: from, to: to }
+      })
     }
   }
 }

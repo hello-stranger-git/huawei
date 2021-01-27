@@ -9,7 +9,15 @@
         :key="i"
         :title="item.title"
         :icon="item.icon"
-        @smallItemHandle="smallItemHandle(item.name)"
+        @smallItemHandle="
+          smallItemHandle(
+            item.name,
+            item.title,
+            item.sonName,
+            item.from,
+            item.to
+          )
+        "
       />
     </div>
   </div>
@@ -26,7 +34,23 @@ export default {
           id: 1,
           icon: require('@/assets/images/home/customerMannager/customerIcon.png'),
           title: '客户',
-          name: ''
+          name: 'InsideManager', // 当前要跳转的路由
+          from: 'CustomerMannager', // 当前路由
+          to: 'DailyDetail', // 点击加号要跳转的路由
+          sonName: [
+            {
+              id: 1, // 此id与insideManager组件的id一致
+              name: ''
+            },
+            {
+              id: 2,
+              name: ''
+            },
+            {
+              id: 3,
+              name: ''
+            }
+          ]
         },
         {
           id: 2,
@@ -61,18 +85,24 @@ export default {
   },
   methods: {
     onClickLeft() {
-      this.$router.go(-1)
+      this.$router.push({ name: 'Home' })
+    },
+    smallItemHandle(name, title, sonName, from, to) {
+      this.$router.push({
+        name: name,
+        params: { title: title, sonName: sonName, from: from, to: to }
+      })
     }
   }
 }
 </script>
 
 <style lang="less" scoped>
-.customerManage{
+.customerManage {
   background-color: #fff;
   min-height: 100%;
 }
-.content{
+.content {
   display: flex;
   flex-wrap: wrap;
   .smallIconItem {
