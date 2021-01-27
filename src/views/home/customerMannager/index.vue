@@ -34,7 +34,9 @@ export default {
           id: 1,
           icon: require('@/assets/images/home/customerMannager/customerIcon.png'),
           title: '客户',
-          name: ''
+          name: 'CustomerConnect',
+          from: 'CustomerMannager', // 当前路由
+          to: ''
         },
         {
           id: 2,
