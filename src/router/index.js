@@ -87,7 +87,7 @@ const routes = [
   {
     path: '/home/workDaily/dailyDetail',
     name: 'DailyDetail',
-    component: () => import('@/views/home/dailyDetail')
+    component: () => import('@/views/home/reportDetail')
   },
   // 营业日报
   {
