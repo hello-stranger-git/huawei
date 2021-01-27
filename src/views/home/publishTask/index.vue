@@ -183,10 +183,11 @@ export default {
   },
   methods: {
     onClickLeft() {
-      this.$router.go(-1)
+      this.$router.push({ name: 'TaskManager' })
     },
     onClickRight() {
       console.log(this.task)
+      this.$router.push({ name: 'TaskManager' })
       Toast('保存成功')
     },
     // 限制长度
