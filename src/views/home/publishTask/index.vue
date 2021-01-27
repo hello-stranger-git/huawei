@@ -16,7 +16,7 @@
           title="任务类型"
           is-link
           :value="task.type ? task.type : '请选择(必填)'"
-          @click="openSelected(typeArr, 0)"
+          @click="taskTypeShow = true"
         />
       </div>
       <!-- 任务员工 -->
@@ -25,7 +25,7 @@
           title="员工"
           is-link
           :value="task.employee ? task.employee : '请选择(必填)'"
-          @click="openSelected(employeeArr, 1)"
+          @click="employeeShow = true"
         />
       </div>
       <!-- 任务内容 -->
@@ -46,7 +46,7 @@
           title="优先级"
           is-link
           :value="task.level ? task.level : '请选择(必填)'"
-          @click="openSelected(levelArr, 2)"
+          @click="levelShow = true"
         />
       </div>
       <!-- 任务时间 -->
@@ -60,19 +60,53 @@
         />
       </div>
     </div>
-    <!-- 弹窗 -->
-    <DownPopup :show="dialogShow" @clickOverlay="closePopup">
+    <!-- 任务类型弹窗 -->
+    <DownPopup :show="taskTypeShow" @clickOverlay="closePopup">
+      <div class="popupHeader">
+        请选择1234
+        <img :src="closeIcon" @click="closePopup" />
+        <div class="confirm" @click="confirmType">确认</div>
+      </div>
+      <div class="items">
+        <div class="item" v-for="(item, i) in typeArr" :key="i">
+          {{ item.value }}
+          <img
+            :src="typeIndex === i ? selectedIcon : unselectedIcon"
+            @click="typeSelected(i)"
+          />
+        </div>
+      </div>
+    </DownPopup>
+    <!-- 任务员工弹窗 -->
+    <DownPopup :show="employeeShow" @clickOverlay="closePopup">
       <div class="popupHeader">
         请选择
         <img :src="closeIcon" @click="closePopup" />
-        <div class="confirm" @click="confirmPopup">确认</div>
+        <div class="confirm" @click="confirmEmployee">确认</div>
       </div>
       <div class="items">
-        <div class="item" v-for="(item, i) in currentArr" :key="i">
+        <div class="item" v-for="(item, i) in employeeArr" :key="i">
           {{ item.value }}
           <img
-            :src="currentIndex === i ? selectedIcon : unselectedIcon"
-            @click="handleSelected(item, i)"
+            :src="employeeIndex === i ? selectedIcon : unselectedIcon"
+            @click="employeeSelected(i)"
+          />
+        </div>
+      </div>
+    </DownPopup>
+    <!-- 任务优先级弹窗 -->
+    <DownPopup :show="levelShow" @clickOverlay="closePopup">
+      <div class="popupHeader">
+        请选择
+        <img :src="closeIcon" @click="closePopup" />
+        <div class="confirm" @click="confirmLevel">确认</div>
+      </div>
+      <div class="items">
+        <div class="item" v-for="(item, i) in levelArr" :key="i">
+          {{ item.value }}
+          <img
+            :src="levelIndex === i ? selectedIcon : unselectedIcon"
+            @click="levelSelected(i)"
           />
         </div>
       </div>
@@ -112,26 +146,35 @@ export default {
       },
       taskAttrArr: ['type', 'employee', 'level'],
       taskAttrindex: null,
+      //
       dialogShow: false,
       currentDate: new Date(),
       datePickerShow: false,
       minDate: new Date(),
-      employeeArr: [
-        { value: '刘德华' },
-        { value: '张学友' },
-        { value: '郭富城' },
-        { value: '黎明' }
-      ],
+
+      // 类型
       typeArr: [
         { value: '普通任务' },
         { value: '客户拜访任务' },
         { value: '商机任务' },
         { value: '市场调研任务' }
       ],
+      taskTypeShow: false,
+      typeIndex: '',
+      // 员工
+      employeeArr: [
+        { value: '刘德华' },
+        { value: '张学友' },
+        { value: '郭富城' },
+        { value: '黎明' }
+      ],
+      employeeIndex: '',
+      employeeShow: false,
+      // 优先级
       levelArr: [{ value: '低' }, { value: '普通' }, { value: '紧急' }],
-      currentIndex: null,
-      currentArr: [],
-      currentValue: ''
+      levelShow: false,
+      levelIndex: '',
+      currentArr: []
     }
   },
   components: {
@@ -146,7 +189,7 @@ export default {
       console.log(this.task)
       Toast('保存成功')
     },
-    // 限制函数
+    // 限制长度
     taskValueChange() {
       if (this.task.content.length > 500) {
         this.task.content = this.task.content.slice(0, 500)
@@ -176,30 +219,53 @@ export default {
       console.log(value)
       this.task.date = value.toLocaleDateString()
     },
-    // 弹窗勾选内容
-    handleSelected(item, i) {
-      console.log(item.value)
-      this.currentIndex = i
-      this.currentValue = item.value
-    },
-    // 关闭弹出框
+
+    // 关闭所有弹出框
     closePopup() {
-      this.dialogShow = false
+      this.taskTypeShow = false
+      this.employeeShow = false
       this.datePickerShow = false
+      this.levelShow = false
     },
-    // 打开弹出框
-    openSelected(arr, index) {
-      this.dialogShow = true //
-      this.currentArr = arr
-      this.taskAttrindex = index
+
+    //
+    // 预选类型
+    typeSelected(i) {
+      this.typeIndex = i
     },
-    // 确认选中值
-    confirmPopup() {
-      this.dialogShow = false
-      this.datePickerShow = false
-      this.task[this.taskAttrArr[this.taskAttrindex]] = this.currentValue
-      this.currentIndex = null
-      this.currentValue = null
+    // 确认选择类型
+    confirmType() {
+      if (this.typeIndex.length <= 0) {
+        Toast('请选择类型')
+        return
+      }
+      this.task.type = this.typeArr[this.typeIndex].value
+      this.taskTypeShow = false
+    },
+    // 预选员工
+    employeeSelected(i) {
+      this.employeeIndex = i
+    },
+    // 确认员工
+    confirmEmployee() {
+      if (this.employeeIndex.length <= 0) {
+        Toast('请选择类型')
+        return
+      }
+      this.task.employee = this.employeeArr[this.employeeIndex].value
+      this.employeeShow = false
+    },
+    // 预选优先级
+    levelSelected(i) {
+      this.levelIndex = i
+    },
+    confirmLevel() {
+      if (this.levelIndex.length <= 0) {
+        Toast('请选择类型')
+        return
+      }
+      this.task.level = this.levelArr[this.levelIndex].value
+      this.levelShow = false
     }
   }
 }
