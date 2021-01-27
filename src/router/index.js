@@ -95,6 +95,24 @@ const routes = [
     name: 'AddChance',
     component: () => import('@/views/home/addChance')
   },
+  // 新增客户拜访
+  {
+    path: '/home/customerMannager/addCustomerVisit',
+    name: 'AddCustomerVisit',
+    component: () => import('@/views/home/addCustomerVisit')
+  },
+  // 新增市场调查
+  {
+    path: '/home/customerMannager/addMarketResearch',
+    name: 'AddMarketResearch',
+    component: () => import('@/views/home/addMarketResearch')
+  },
+  // 新增竞品管理
+  {
+    path: '/home/customerMannager/addCompeteManager',
+    name: 'AddCompeteManager',
+    component: () => import('@/views/home/addCompeteManager')
+  },
   // 任务管理
   {
     path: '/home/taskManager',
