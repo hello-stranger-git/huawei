@@ -63,7 +63,7 @@ export default {
           title: '周报',
           name: 'InsideManager', // 当前要跳转的路由
           from: 'WorkReport', // 当前路由
-          to: 'DailyDetail', // 点击加号要跳转的路由
+          to: 'WeeklyDetail', // 点击加号要跳转的路由
           sonName: [
             {
               id: 1, // 此id与insideManager组件的id一致
@@ -85,7 +85,7 @@ export default {
           title: '月报',
           name: 'InsideManager', // 当前要跳转的路由
           from: 'WorkReport', // 当前路由
-          to: 'DailyDetail', // 点击加号要跳转的路由
+          to: 'MonthlyDetail', // 点击加号要跳转的路由
           sonName: [
             {
               id: 1, // 此id与insideManager组件的id一致
