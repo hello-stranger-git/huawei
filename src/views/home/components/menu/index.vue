@@ -1,8 +1,14 @@
 <!--menu-->
 <template>
   <div class="menu" style="height: 110px;">
-    <div v-for="item in menuData" :key="item.id" @click="jumpMenuItem(item.name)">
-    <MenuItem  :menuItem="item"/>
+    <div
+      v-for="item in menuData"
+      :key="item.id"
+      @click="
+        jumpMenuItem(item.name, item.title, item.sonName, item.from, item.to)
+      "
+    >
+      <MenuItem :menuItem="item" />
     </div>
   </div>
 </template>
@@ -19,8 +25,11 @@ export default {
     MenuItem
   },
   methods: {
-    jumpMenuItem(name) {
-      this.$router.push({ name: name })
+    jumpMenuItem(name, title, sonName, from, to) {
+      this.$router.push({
+        name: name,
+        params: { title: title, sonName: sonName, from: from, to: to }
+      })
     }
   }
 }
