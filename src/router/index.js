@@ -100,8 +100,19 @@ const routes = [
     path: '/home/taskManager/publishTask',
     name: 'PublishTask',
     component: () => import('@/views/home/publishTask')
+  },
+  // 选择部门
+  {
+    path: '/selectDepartment',
+    name: 'SelectDepartment',
+    component: () => import('@/views/selectDepartment/selectDepartment')
+  },
+  // 选择人员
+  {
+    path: '/selectPeople',
+    name: 'SelectPeople',
+    component: () => import('@/views/selectDepartment/selectPeople')
   }
-
 ]
 const originalPush = VueRouter.prototype.push
 VueRouter.prototype.push = function push(location) {
