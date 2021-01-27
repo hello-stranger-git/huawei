@@ -2,23 +2,23 @@
 <template>
   <div>
     <Menu :menuData="menuData" />
-    <CheckWork/>
-    <WorkReport/>
-    <CustomerVisit/>
-    <TaskManager/>
-    <FeeApplocation/>
-    <TravelRequest/>
+    <CheckWork />
+    <WorkReport />
+    <CustomerVisit />
+    <TaskManager />
+    <FeeApplocation />
+    <TravelRequest />
   </div>
 </template>
 
 <script>
 import Menu from './components/menu'
-import CheckWork from './components/checkWork'// 考勤
-import WorkReport from './components/workReport'// 工作汇报
-import CustomerVisit from './components/customerVisit'// 客户拜访
-import TaskManager from './components/taskManager'// 任务管理
-import FeeApplocation from './components/feeApplocation'// 费用申请
-import TravelRequest from './components/travelRequest'// 出差申请
+import CheckWork from './components/checkWork' // 考勤
+import WorkReport from './components/workReport' // 工作汇报
+import CustomerVisit from './components/customerVisit' // 客户拜访
+import TaskManager from './components/taskManager' // 任务管理
+import FeeApplocation from './components/feeApplocation' // 费用申请
+import TravelRequest from './components/travelRequest' // 出差申请
 export default {
   components: {
     Menu,
@@ -64,7 +64,24 @@ export default {
           id: 5,
           title: '费用申请',
           info: 0,
-          icon: require('@/assets/images/home/feeApplocation.png')
+          icon: require('@/assets/images/home/feeApplocation.png'),
+          name: 'InsideManager', // 当前要跳转的路由
+          from: 'Home', // 当前路由
+          to: '', // 点击加号要跳转的路由
+          sonName: [
+            {
+              id: 1, // 此id与insideManager组件的id一致
+              name: ''
+            },
+            {
+              id: 2,
+              name: ''
+            },
+            {
+              id: 3,
+              name: ''
+            }
+          ]
         },
         {
           id: 6,
