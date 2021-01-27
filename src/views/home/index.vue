@@ -90,7 +90,7 @@ export default {
           icon: require('@/assets/images/home/travelRequest.png'),
           name: 'InsideManager', // 当前要跳转的路由
           from: 'Home', // 当前路由
-          to: '', // 点击加号要跳转的路由
+          to: 'AddTravelApplocation', // 点击加号要跳转的路由
           sonName: [
             {
               id: 1, // 此id与insideManager组件的id一致
@@ -113,7 +113,7 @@ export default {
           icon: require('@/assets/images/home/vacationApplicationIcon.png'),
           name: 'InsideManager', // 当前要跳转的路由
           from: 'Home', // 当前路由
-          to: '', // 点击加号要跳转的路由
+          to: 'AddVacationApplication', // 点击加号要跳转的路由
           sonName: [
             {
               id: 1, // 此id与insideManager组件的id一致
@@ -136,7 +136,7 @@ export default {
           icon: require('@/assets/images/home/outApplicationIcon.png'),
           name: 'InsideManager', // 当前要跳转的路由
           from: 'Home', // 当前路由
-          to: '', // 点击加号要跳转的路由
+          to: 'AddOutApplication', // 点击加号要跳转的路由
           sonName: [
             {
               id: 1, // 此id与insideManager组件的id一致

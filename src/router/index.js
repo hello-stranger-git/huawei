@@ -137,6 +137,24 @@ const routes = [
     name: 'AddFeeApplocation',
     component: () => import('@/views/home/addFeeApplocation')
   },
+
+  // 新增出差申请
+  {
+    path: '/home/addTravelApplocation',
+    name: 'AddTravelApplocation',
+    component: () => import('@/views/home/addTravelApplocation')
+  }, // 新增请假申请
+  {
+    path: '/home/addVacationApplication',
+    name: 'AddVacationApplication',
+    component: () => import('@/views/home/addVacationApplication')
+  }, // 新增外出申请
+  {
+    path: '/home/addOutApplication',
+    name: 'AddOutApplication',
+    component: () => import('@/views/home/addOutApplication')
+  },
+
   // 任务管理
   {
     path: '/home/taskManager',
