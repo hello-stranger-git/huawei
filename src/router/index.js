@@ -94,6 +94,12 @@ const routes = [
     path: '/home/taskManager',
     name: 'TaskManager',
     component: () => import('@/views/home/taskManager')
+  },
+  // 任务发布
+  {
+    path: '/home/taskManager/publishTask',
+    name: 'PublishTask',
+    component: () => import('@/views/home/publishTask')
   }
 
 ]

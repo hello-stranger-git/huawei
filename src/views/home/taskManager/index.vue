@@ -75,7 +75,9 @@ export default {
     onClickLeft() {
       this.$router.go(-1)
     },
-    onClickRight() {}
+    onClickRight() {
+      this.$router.push({ name: 'PublishTask' })
+    }
   }
 }
 </script>
