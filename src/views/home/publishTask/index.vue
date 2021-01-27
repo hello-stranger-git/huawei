@@ -144,14 +144,9 @@ export default {
         level: '',
         date: ''
       },
-      taskAttrArr: ['type', 'employee', 'level'],
-      taskAttrindex: null,
-      //
-      dialogShow: false,
       currentDate: new Date(),
       datePickerShow: false,
       minDate: new Date(),
-
       // 类型
       typeArr: [
         { value: '普通任务' },
@@ -173,8 +168,7 @@ export default {
       // 优先级
       levelArr: [{ value: '低' }, { value: '普通' }, { value: '紧急' }],
       levelShow: false,
-      levelIndex: '',
-      currentArr: []
+      levelIndex: ''
     }
   },
   components: {
@@ -187,6 +181,22 @@ export default {
     },
     onClickRight() {
       console.log(this.task)
+      if (this.task.type.length <= 0) {
+        Toast('请选择任务类型')
+        return
+      }
+      if (this.task.employee.length < 0) {
+        Toast('请选择员工')
+        return
+      }
+      if (this.task.level.length < 0) {
+        Toast('请选择优先级')
+        return
+      }
+      if (this.task.date.length < 0) {
+        Toast('请选择截止时间')
+        return
+      }
       Toast('保存成功')
     },
     // 限制长度
