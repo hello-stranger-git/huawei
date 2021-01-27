@@ -83,11 +83,17 @@ const routes = [
     name: 'InsideManager',
     component: () => import('@/views/insideManager')
   },
-  // 日报详情
+  // 周报、日报、月报详情
   {
-    path: '/home/workDaily/daily/dailyDetail',
+    path: '/home/workDaily/dailyDetail',
     name: 'DailyDetail',
     component: () => import('@/views/home/dailyDetail')
+  },
+  // 营业日报
+  {
+    path: '/home/workDaily/businessDaily',
+    name: 'BusinessDaily',
+    component: () => import('@/views/home/businessDaily')
   },
   // 添加商机
   {
