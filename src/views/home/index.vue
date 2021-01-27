@@ -87,19 +87,70 @@ export default {
           id: 6,
           title: '出差申请',
           info: 0,
-          icon: require('@/assets/images/home/travelRequest.png')
+          icon: require('@/assets/images/home/travelRequest.png'),
+          name: 'InsideManager', // 当前要跳转的路由
+          from: 'Home', // 当前路由
+          to: '', // 点击加号要跳转的路由
+          sonName: [
+            {
+              id: 1, // 此id与insideManager组件的id一致
+              name: ''
+            },
+            {
+              id: 2,
+              name: ''
+            },
+            {
+              id: 3,
+              name: ''
+            }
+          ]
         },
         {
           id: 7,
           title: '请假申请',
           info: 0,
-          icon: require('@/assets/images/home/vacationApplicationIcon.png')
+          icon: require('@/assets/images/home/vacationApplicationIcon.png'),
+          name: 'InsideManager', // 当前要跳转的路由
+          from: 'Home', // 当前路由
+          to: '', // 点击加号要跳转的路由
+          sonName: [
+            {
+              id: 1, // 此id与insideManager组件的id一致
+              name: ''
+            },
+            {
+              id: 2,
+              name: ''
+            },
+            {
+              id: 3,
+              name: ''
+            }
+          ]
         },
         {
           id: 8,
-          title: '外出公告',
+          title: '外出申请',
           info: 0,
-          icon: require('@/assets/images/home/outApplicationIcon.png')
+          icon: require('@/assets/images/home/outApplicationIcon.png'),
+          name: 'InsideManager', // 当前要跳转的路由
+          from: 'Home', // 当前路由
+          to: '', // 点击加号要跳转的路由
+          sonName: [
+            {
+              id: 1, // 此id与insideManager组件的id一致
+              name: ''
+            },
+            {
+              id: 2,
+              name: ''
+            },
+            {
+              id: 3,
+              name: ''
+            }
+          ]
         },
         {
           id: 9,
