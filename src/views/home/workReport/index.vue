@@ -83,13 +83,45 @@ export default {
           id: 3,
           icon: require('@/assets/images/home/workReport/monthly.png'),
           title: '月报',
-          name: ''
+          name: 'InsideManager', // 当前要跳转的路由
+          from: 'WorkReport', // 当前路由
+          to: '', // 点击加号要跳转的路由
+          sonName: [
+            {
+              id: 1, // 此id与insideManager组件的id一致
+              name: ''
+            },
+            {
+              id: 2,
+              name: ''
+            },
+            {
+              id: 3,
+              name: ''
+            }
+          ]
         },
         {
           id: 4,
           icon: require('@/assets/images/home/workReport/businessDaily.png'),
           title: '营业日报',
-          name: ''
+          name: 'InsideManager', // 当前要跳转的路由
+          from: 'WorkReport', // 当前路由
+          to: '', // 点击加号要跳转的路由
+          sonName: [
+            {
+              id: 1, // 此id与insideManager组件的id一致
+              name: ''
+            },
+            {
+              id: 2,
+              name: ''
+            },
+            {
+              id: 3,
+              name: ''
+            }
+          ]
         }
       ]
     }
