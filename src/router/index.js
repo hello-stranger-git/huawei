@@ -89,6 +89,12 @@ const routes = [
     name: 'DailyDetail',
     component: () => import('@/views/home/dailyDetail')
   },
+  // 添加商机
+  {
+    path: '/home/customerMannager/addChance',
+    name: 'AddChance',
+    component: () => import('@/views/home/addChance')
+  },
   // 任务管理
   {
     path: '/home/taskManager',

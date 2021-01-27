@@ -64,7 +64,7 @@ export default {
           title: '商机',
           name: 'InsideManager', // 当前要跳转的路由
           from: 'CustomerMannager', // 当前路由
-          to: '', // 点击加号要跳转的路由
+          to: 'AddChance', // 点击加号要跳转的路由
           sonName: [
             {
               id: 1, // 此id与insideManager组件的id一致
