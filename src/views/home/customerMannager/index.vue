@@ -42,7 +42,7 @@ export default {
           title: '拜访',
           name: 'InsideManager', // 当前要跳转的路由
           from: 'CustomerMannager', // 当前路由
-          to: 'DailyDetail', // 点击加号要跳转的路由
+          to: '', // 点击加号要跳转的路由
           sonName: [
             {
               id: 1, // 此id与insideManager组件的id一致
@@ -64,7 +64,7 @@ export default {
           title: '商机',
           name: 'InsideManager', // 当前要跳转的路由
           from: 'CustomerMannager', // 当前路由
-          to: 'DailyDetail', // 点击加号要跳转的路由
+          to: '', // 点击加号要跳转的路由
           sonName: [
             {
               id: 1, // 此id与insideManager组件的id一致
@@ -84,7 +84,23 @@ export default {
           id: 4,
           icon: require('@/assets/images/home/customerMannager/businessIcon.png'),
           title: '市场调查',
-          name: ''
+          name: 'InsideManager', // 当前要跳转的路由
+          from: 'CustomerMannager', // 当前路由
+          to: '', // 点击加号要跳转的路由
+          sonName: [
+            {
+              id: 1, // 此id与insideManager组件的id一致
+              name: ''
+            },
+            {
+              id: 2,
+              name: ''
+            },
+            {
+              id: 3,
+              name: ''
+            }
+          ]
         },
         {
           id: 5,
