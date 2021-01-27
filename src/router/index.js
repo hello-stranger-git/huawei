@@ -77,11 +77,11 @@ const routes = [
     name: 'CustomerMannager',
     component: () => import('@/views/home/customerMannager')
   },
-  // 日报
+  // 内部管理
   {
-    path: '/home/workDaily/daily',
-    name: 'Daily',
-    component: () => import('@/views/home/daily')
+    path: '/insideManager',
+    name: 'InsideManager',
+    component: () => import('@/views/insideManager')
   },
   // 日报详情
   {
@@ -103,7 +103,10 @@ const routes = [
   }
 
 ]
-
+const originalPush = VueRouter.prototype.push
+VueRouter.prototype.push = function push(location) {
+  return originalPush.call(this, location).catch(err => err)
+}
 const router = new VueRouter({
   routes
 })

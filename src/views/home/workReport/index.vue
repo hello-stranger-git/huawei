@@ -10,7 +10,7 @@
         :key="i"
         :title="item.title"
         :icon="item.icon"
-        @smallItemHandle="smallItemHandle(item.name)"
+        @smallItemHandle="smallItemHandle(item.name,item.title,item.data,item.from,item.to)"
       />
     </div>
   </div>
@@ -30,8 +30,30 @@ export default {
         {
           id: 1,
           icon: require('@/assets/images/home/workReport/daily.png'),
-          title: '日报',
-          name: 'Daily'
+          title: '日报', // 标题
+          name: 'InsideManager', // 当前要跳转的路由
+          from: 'WorkReport', // 当前路由
+          to: 'DailyDetail', // 点击加号要跳转的路由
+          data: [
+            {
+              id: 1,
+              icon: require('@/assets/images/home/workReport/mySubmitIcon.png'),
+              title: '我提交的',
+              name: ''
+            },
+            {
+              id: 2,
+              icon: require('@/assets/images/home/workReport/reportToMeIcon.png'),
+              title: '报告给我的',
+              name: ''
+            },
+            {
+              id: 3,
+              icon: require('@/assets/images/home/workReport/ccToMeIcon.png'),
+              title: '抄送我的',
+              name: ''
+            }
+          ]
         },
         {
           id: 2,
@@ -56,10 +78,10 @@ export default {
   },
   methods: {
     onClickLeft() {
-      this.$router.go(-1)
+      this.$router.push({ name: 'Home' })
     },
-    smallItemHandle(name) {
-      this.$router.push({ name: name })
+    smallItemHandle(name, title, data, from, to) {
+      this.$router.push({ name: name, params: { title: title, data: data, from: from, to: to } })
     }
   }
 }
