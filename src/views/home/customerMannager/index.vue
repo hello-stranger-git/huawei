@@ -42,7 +42,7 @@ export default {
           title: '拜访',
           name: 'InsideManager', // 当前要跳转的路由
           from: 'CustomerMannager', // 当前路由
-          to: '', // 点击加号要跳转的路由
+          to: 'AddCustomerVisit', // 点击加号要跳转的路由
           sonName: [
             {
               id: 1, // 此id与insideManager组件的id一致
@@ -86,7 +86,7 @@ export default {
           title: '市场调查',
           name: 'InsideManager', // 当前要跳转的路由
           from: 'CustomerMannager', // 当前路由
-          to: '', // 点击加号要跳转的路由
+          to: 'AddMarketResearch', // 点击加号要跳转的路由
           sonName: [
             {
               id: 1, // 此id与insideManager组件的id一致
@@ -105,10 +105,10 @@ export default {
         {
           id: 5,
           icon: require('@/assets/images/home/customerMannager/competitive.png'),
-          title: '竞争管理',
+          title: '竞品管理',
           name: 'InsideManager', // 当前要跳转的路由
           from: 'CustomerMannager', // 当前路由
-          to: '', // 点击加号要跳转的路由
+          to: 'AddCompeteManager', // 点击加号要跳转的路由
           sonName: [
             {
               id: 1, // 此id与insideManager组件的id一致

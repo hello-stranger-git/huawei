@@ -1,15 +1,10 @@
-<!--日报、周报、月报详情-->
+<!--新增客户拜访-->
 <template>
   <div>
     <!-- 头部区域 -->
-    <TopTitle
-      title="日报"
-      @onClickLeft="onClickLeft"
-      @onClickRight="onClickRight"
-    >
-      <span>提交</span>
-    </TopTitle>
-    日报、周报、月报详情
+    <TopTitle title="新增客户拜访" @onClickLeft="onClickLeft" @onClickRight="onClickRight">
+      <span>保存</span>
+    </TopTitle>新增客户拜访
   </div>
 </template>
 
@@ -53,10 +48,6 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
-.van-nav-bar__right {
-  font-size: 14px;
-  font-weight: 400;
-  color: #343434;
-}
+<style lang="scss" scoped>
+
 </style>

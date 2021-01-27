@@ -83,17 +83,41 @@ const routes = [
     name: 'InsideManager',
     component: () => import('@/views/insideManager')
   },
-  // 日报详情
+  // 周报、日报、月报详情
   {
-    path: '/home/workDaily/daily/dailyDetail',
+    path: '/home/workDaily/dailyDetail',
     name: 'DailyDetail',
     component: () => import('@/views/home/dailyDetail')
+  },
+  // 营业日报
+  {
+    path: '/home/workDaily/businessDaily',
+    name: 'BusinessDaily',
+    component: () => import('@/views/home/businessDaily')
   },
   // 添加商机
   {
     path: '/home/customerMannager/addChance',
     name: 'AddChance',
     component: () => import('@/views/home/addChance')
+  },
+  // 新增客户拜访
+  {
+    path: '/home/customerMannager/addCustomerVisit',
+    name: 'AddCustomerVisit',
+    component: () => import('@/views/home/addCustomerVisit')
+  },
+  // 新增市场调查
+  {
+    path: '/home/customerMannager/addMarketResearch',
+    name: 'AddMarketResearch',
+    component: () => import('@/views/home/addMarketResearch')
+  },
+  // 新增竞品管理
+  {
+    path: '/home/customerMannager/addCompeteManager',
+    name: 'AddCompeteManager',
+    component: () => import('@/views/home/addCompeteManager')
   },
   // 任务管理
   {

@@ -1,15 +1,10 @@
-<!--日报、周报、月报详情-->
+<!--营业日报-->
 <template>
   <div>
     <!-- 头部区域 -->
-    <TopTitle
-      title="日报"
-      @onClickLeft="onClickLeft"
-      @onClickRight="onClickRight"
-    >
-      <span>提交</span>
-    </TopTitle>
-    日报、周报、月报详情
+    <TopTitle title="营业日报" @onClickLeft="onClickLeft" @onClickRight="onClickRight">
+      <span>保存</span>
+    </TopTitle>营业日报
   </div>
 </template>
 
@@ -53,10 +48,6 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
-.van-nav-bar__right {
-  font-size: 14px;
-  font-weight: 400;
-  color: #343434;
-}
+<style lang="scss" scoped>
+
 </style>
