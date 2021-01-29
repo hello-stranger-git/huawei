@@ -135,13 +135,22 @@ const routes = [
   {
     path: '/selectDepartment',
     name: 'SelectDepartment',
-    component: () => import('@/views/selectDepartment/selectDepartment')
-  },
-  // 选择人员
-  {
-    path: '/selectPeople',
-    name: 'SelectPeople',
-    component: () => import('@/views/selectDepartment/selectPeople')
+    redirect: '/selectDepartment',
+    component: () => import('@/views/selectDepartment'),
+    children: [
+      // 选择部门
+      {
+        path: '/selectDepartment',
+        name: 'SelectDepartment',
+        component: () => import('@/views/selectDepartment/selectDepartment')
+      },
+      // 选择人员
+      {
+        path: '/selectPeople',
+        name: 'SelectPeople',
+        component: () => import('@/views/selectDepartment/selectPeople')
+      }
+    ]
   }
 ]
 const originalPush = VueRouter.prototype.push
