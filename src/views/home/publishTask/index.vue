@@ -186,7 +186,7 @@ export default {
   },
   methods: {
     onClickLeft() {
-      this.$router.go(-1)
+      this.$router.push({ name: 'TaskManager' })
     },
     onClickRight() {
       console.log(this.task)
@@ -194,19 +194,20 @@ export default {
         Toast('请选择任务类型')
         return
       }
-      if (this.task.employee.length < 0) {
+      if (this.task.employee.length <= 0) {
         Toast('请选择员工')
         return
       }
-      if (this.task.level.length < 0) {
+      if (this.task.level.length <= 0) {
         Toast('请选择优先级')
         return
       }
-      if (this.task.date.length < 0) {
+      if (this.task.date.length <= 0) {
         Toast('请选择截止时间')
         return
       }
       Toast('保存成功')
+      this.$router.push({ name: 'TaskManager' })
     },
     // 限制长度
     taskValueChange() {
