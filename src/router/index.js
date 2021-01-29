@@ -83,10 +83,22 @@ const routes = [
     name: 'InsideManager',
     component: () => import('@/views/insideManager')
   },
-  // 周报、日报、月报详情
+  // 日报详情
   {
     path: '/home/workDaily/dailyDetail',
     name: 'DailyDetail',
+    component: () => import('@/views/home/reportDetail')
+  },
+  // 月报详情
+  {
+    path: '/home/workDaily/monthlyDetail',
+    name: 'MonthlyDetail',
+    component: () => import('@/views/home/reportDetail')
+  },
+  // 周报详情
+  {
+    path: '/home/workDaily/weeklyDetail',
+    name: 'WeeklyDetail',
     component: () => import('@/views/home/reportDetail')
   },
   // 营业日报
@@ -107,6 +119,12 @@ const routes = [
     name: 'AddCustomerVisit',
     component: () => import('@/views/home/addCustomerVisit')
   },
+  // 客户
+  {
+    path: '/home/customerMannager/customerConnect',
+    name: 'CustomerConnect',
+    component: () => import('@/views/home/customerConnect')
+  },
   // 新增市场调查
   {
     path: '/home/customerMannager/addMarketResearch',
@@ -119,6 +137,30 @@ const routes = [
     name: 'AddCompeteManager',
     component: () => import('@/views/home/addCompeteManager')
   },
+  // 新增费用申请
+  {
+    path: '/home/addFeeApplocation',
+    name: 'AddFeeApplocation',
+    component: () => import('@/views/home/addFeeApplocation')
+  },
+
+  // 新增出差申请
+  {
+    path: '/home/addTravelApplocation',
+    name: 'AddTravelApplocation',
+    component: () => import('@/views/home/addTravelApplocation')
+  }, // 新增请假申请
+  {
+    path: '/home/addVacationApplication',
+    name: 'AddVacationApplication',
+    component: () => import('@/views/home/addVacationApplication')
+  }, // 新增外出申请
+  {
+    path: '/home/addOutApplication',
+    name: 'AddOutApplication',
+    component: () => import('@/views/home/addOutApplication')
+  },
+
   // 任务管理
   {
     path: '/home/taskManager',
