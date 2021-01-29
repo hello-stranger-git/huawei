@@ -152,7 +152,16 @@ export default {
         { value: '普通任务' },
         { value: '客户拜访任务' },
         { value: '商机任务' },
-        { value: '市场调研任务' }
+        {
+          value:
+            '123456789123456789123456789123456789123456789123456789123456789'
+        },
+        { value: '普通任务' },
+        { value: '客户拜访任务' },
+        { value: '商机任务' },
+        {
+          value: '市场调研任务市场调研任务市场调研市'
+        }
       ],
       taskTypeShow: false,
       typeIndex: '',
@@ -359,13 +368,16 @@ export default {
     position: relative;
     padding-left: 42px;
     margin-top: 22px;
+    padding-right: 80px;
+    word-wrap: break-word;
+    text-align: left;
     &:first-child {
       margin-top: 0;
     }
     img {
       position: absolute;
       right: 56px;
-      top: 4px;
+      top: 2px;
       width: 17px;
       height: 17px;
     }
@@ -378,5 +390,13 @@ export default {
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+
+.van-cell__value {
+  overflow: hidden;
+  span {
+    display: inline-block;
+    text-align: left;
+  }
 }
 </style>
